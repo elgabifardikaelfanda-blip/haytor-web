@@ -1,363 +1,510 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAYTOR - Digital Solutions & Software Utility</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Keyframe Animations */
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.08); }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 6s infinite ease-in-out;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 50%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textShimmer 4s linear infinite;
+        }
+        @keyframes textShimmer {
+            to { background-position: 200% center; }
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900 relative min-h-screen overflow-x-hidden">
 
-    <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-microchip font-bold text-teal-400 text-xl sm:text-2xl"></i>
-                <span class="text-lg sm:text-xl font-extrabold tracking-wider text-white">HAYTOR<span class="text-teal-400">.TECH</span></span>
-            </div>
-            <div class="flex items-center gap-2 sm:gap-3">
-                <a href="https://t.me/jengkoler" target="_blank" class="bg-sky-500/10 border border-sky-500/30 hover:bg-sky-500 hover:text-white text-sky-400 font-semibold px-3 py-1.5 rounded-lg text-xs sm:text-sm transition flex items-center gap-1.5">
-                    <i class="fa-brands fa-telegram text-sm sm:text-base"></i>
-                    <span>Telegram</span>
-                </a>
-                <a href="https://wa.me/6285770059860" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs sm:text-sm transition flex items-center gap-1.5">
-                    <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-                    <span>WhatsApp</span>
-                </a>
-            </div>
-        </div>
-    </header>
+    <!-- Interactive Background Canvas -->
+    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
 
-    <!-- Hero Section -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16 text-center">
-        <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold tracking-wide uppercase inline-block mb-3 sm:mb-4">
-            Next-Gen Software & Automation Utility
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4 sm:mb-6 leading-tight">
-            Solusi Perangkat Lunak & <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Lisensi Otomasi Digital</span>
-        </h1>
-        <p class="text-slate-400 text-xs sm:text-base max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
-            Pusat penyediaan aplikasi otomasi, skrip integrasi pesan, dan lisensi kemitraan digital berkinerja tinggi untuk mendukung efisiensi bisnis Anda.
-        </p>
-        <div class="flex justify-center gap-3">
-            <a href="#products" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl text-xs sm:text-sm transition shadow-lg shadow-teal-500/20">
-                Lihat Katalog Produk
-            </a>
-        </div>
-    </section>
+    <!-- Glowing Background Orbs -->
+    <div class="fixed top-1/4 -left-20 w-80 h-80 bg-teal-500/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow z-0"></div>
+    <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[140px] pointer-events-none animate-pulse-glow z-0" style="animation-delay: 3s;"></div>
 
-    <!-- Product Catalog Grid -->
-    <section id="products" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Katalog Produk & Paket Lisensi</h2>
-            <p class="text-slate-400 text-xs sm:text-sm">Pilih produk dan tingkatan lisensi sesuai kebutuhan operasional Anda.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-
-            <!-- PRODUK 1: HOLLOW APK -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 sm:p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] sm:text-xs font-bold text-teal-400 uppercase tracking-widest">Utility Engine</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mt-0.5">HOLLOW APP</h3>
-                        </div>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-slate-700">No-Telegram Needed</span>
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/80">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+                <div class="flex items-center gap-2 group cursor-pointer">
+                    <div class="p-2 rounded-lg bg-teal-500/10 border border-teal-500/30 group-hover:border-teal-400 transition">
+                        <i class="fa-solid fa-microchip font-bold text-teal-400 text-lg sm:text-xl"></i>
                     </div>
-                    <p class="text-slate-400 text-xs sm:text-sm mb-5">Aplikasi otomasi serbaguna dengan manajemen akses terstruktur dan fleksibilitas durasi penggunaan.</p>
-
-                    <!-- Paket Basic -->
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">📦 Paket Akses Pengguna (Basic)</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 3.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">2 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 5.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">5 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 8.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">7 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 10.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">14 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 13.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">21 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 14.000</span></div>
-                        </div>
-                    </div>
-
-                    <!-- VIP -->
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👑 Lisensi VIP (Full Feature)</h4>
-                        <div class="grid grid-cols-2 gap-2 text-xs mb-2">
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800"><span class="text-slate-400 block text-[10px]">VIP 1 Bulan</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 25.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800"><span class="text-slate-400 block text-[10px]">VIP Permanent</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 50.000</span></div>
-                        </div>
-                        <p class="text-[10px] text-slate-400">✓ Fitur bug terbuka penuh (Tidak bisa jualan).</p>
-                    </div>
-
-                    <!-- Role & Benefit -->
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👥 Kemitraan & Lisensi Distribusi</h4>
-                        <ul class="text-xs space-y-2 text-slate-300">
-                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Reseller</span><span class="text-[10px] text-slate-400">Bisa jualan + Fitur bug terbuka (Tanpa sender global)</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 80.000</span>
-                            </li>
-                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Partner</span><span class="text-[10px] text-slate-400">Sender global + Bisa jualan di app + Fitur bug terbuka</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 100.000</span>
-                            </li>
-                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Tangan Kanan</span><span class="text-[10px] text-slate-400">Benefit Partner + Akses tinggi + Prioritas support</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 130.000</span>
-                            </li>
-                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">PT Pribadi</span><span class="text-[10px] text-slate-400">Akses penuh + Seluruh benefit tertinggi</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 160.000</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Fitur & Tools Hollow -->
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                        <p class="font-bold text-teal-400 mb-1">⚡ Fitur & Tools Unggulan:</p>
-                        <p>• NewFunc, Force Close iOS/Invisible, Delay Hard, Kill System UI</p>
-                        <p>• Sender Global, Al-Qur'an Digital, Komik/Manhwa, Anime, Donghua, Music</p>
-                        <p>• Domain Report, Port Scanner, Custom Theme/Background, AI Chat</p>
-                        <p>• Fix TikTok & Instagram Downloader, QR Generator</p>
-                    </div>
+                    <span class="text-lg sm:text-xl font-extrabold tracking-wider text-white">HAYTOR<span class="text-teal-400">.TECH</span></span>
                 </div>
-
-                <div class="mt-6 flex gap-2">
-                    <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Hollow%20App" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <a href="https://t.me/jengkoler" target="_blank" class="bg-sky-500/10 border border-sky-500/30 hover:bg-sky-500 hover:text-white text-sky-400 font-semibold px-3 py-1.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-sky-500/5">
+                        <i class="fa-brands fa-telegram text-sm sm:text-base"></i>
+                        <span>Telegram</span>
                     </a>
-                    <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-telegram text-sm"></i> Order Tele
+                    <a href="https://wa.me/6285770059860" target="_blank" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold px-3.5 py-1.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-emerald-500/20">
+                        <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
+                        <span>WhatsApp</span>
                     </a>
                 </div>
             </div>
+        </header>
 
-            <!-- PRODUK 2: MANTAX -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 sm:p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] sm:text-xs font-bold text-teal-400 uppercase tracking-widest">System Engine</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mt-0.5">MANTAX UTILITY</h3>
-                        </div>
-                        <span class="bg-teal-500/10 text-teal-400 border border-teal-500/30 text-[10px] sm:text-xs px-2.5 py-1 rounded-full font-bold">Wajib Telegram</span>
-                    </div>
-                    <p class="text-slate-400 text-xs sm:text-sm mb-5">Engine integrasi otomatisasi pesan dengan dukungan pembaruan berkala dan grup komunitas terstruktur.</p>
-
-                    <div class="space-y-2 mb-5">
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-white text-xs block">1 Hari (Trial)</span>
-                                <span class="text-[10px] text-slate-400">Hanya Testi</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-slate-500 line-through">Rp 5.000</span>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm block">Rp 3.000</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-white text-xs block">Full Update</span>
-                                <span class="text-[10px] text-slate-400">Sender Global + Grup Mantax</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-slate-500 line-through">Rp 60.000</span>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm block">Rp 40.000</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-white text-xs block">Reseller</span>
-                                <span class="text-[10px] text-slate-400">Bisa jualan + Grup Mantax</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-slate-500 line-through">Rp 80.000</span>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm block">Rp 70.000</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-white text-xs block">Partner</span>
-                                <span class="text-[10px] text-slate-400">Bisa jualan + Grup Mantax</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-slate-500 line-through">Rp 100.000</span>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm block">Rp 90.000</span>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-white text-xs block">TK / Staff</span>
-                                <span class="text-[10px] text-slate-400">Otoritas manajemen + Kemitraan penuh</span>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-[10px] text-slate-500 line-through">Rp 150.000</span>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm block">Rp 130.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fitur Mantax -->
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                        <p class="font-bold text-teal-400 mb-1">⚡ Fitur & Benefit Mantax:</p>
-                        <p>• Delay Aman Nokos, FC iOS Invisible, Spam Call, RAT, Sadap, Spam Pairing</p>
-                        <p>• AI Tools, OSINT, Network, Cek Ban WA, Ubot, Downloader, dll.</p>
-                        <p>• Free SC via Telegram/WA, Free Tutor Run SC & Add Sender.</p>
-                    </div>
-                </div>
-
-                <div class="mt-6 flex gap-2">
-                    <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Mantax%20Utility" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
-                    </a>
-                    <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-telegram text-sm"></i> Order Tele
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUK 3: SYAM APK -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 sm:p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] sm:text-xs font-bold text-teal-400 uppercase tracking-widest">Standalone App</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mt-0.5">SYAM AUTOMATION</h3>
-                        </div>
-                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] sm:text-xs px-2.5 py-1 rounded-full font-bold">No-Telegram</span>
-                    </div>
-                    
-                    <!-- Highlights -->
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-5 text-[11px] space-y-1.5 text-slate-300">
-                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Otomatisasi via WhatsApp (Praktis)</p>
-                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Pembaruan Aplikasi Gratis Berkala</p>
-                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Login Aman Berbasis Akun Gmail</p>
-                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Panduan Video Penggunaan Lengkap</p>
-                    </div>
-
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">⏱️ Uji Coba (Trial)</h4>
-                        <div class="grid grid-cols-3 gap-2 text-xs">
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 2.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">7 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 10.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">30 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 20.000</span></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">📜 Bundle Aplikasi & Role</h4>
-                        <div class="space-y-2 text-xs">
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Full Update</span><span class="text-[10px] text-slate-400">App + Script + Sender Global</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 40.000</span>
-                            </div>
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Reseller</span><span class="text-[10px] text-slate-400">Bisa Jualan + Script + Komunitas</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 80.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tools & Bug Syam -->
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                        <p class="font-bold text-teal-400 mb-1">⚡ Tools & Menu Bug Syam:</p>
-                        <p>• 3 RAT in 1 APK, AI Tools, OSINT, Network, Panel/VPS, Termux/Ubuntu</p>
-                        <p>• Delay, FC Android/iOS Invisible, Spam Call, Bug Grup, Ubot Telegram</p>
-                    </div>
-                </div>
-
-                <div class="mt-6 flex gap-2">
-                    <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Syam%20Automation" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
-                    </a>
-                    <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-telegram text-sm"></i> Order Tele
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUK 4: VILAIN SYSTEM -->
-            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 sm:p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] sm:text-xs font-bold text-teal-400 uppercase tracking-widest">Fast Engine</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mt-0.5">VILAIN ENGINE</h3>
-                        </div>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] sm:text-xs px-2.5 py-1 rounded-full border border-slate-700">Wajib Telegram</span>
-                    </div>
-                    <p class="text-slate-400 text-xs sm:text-sm mb-5">Engine otomasi cepat dengan optimasi integrasi jaringan Telegram untuk efisiensi tinggi.</p>
-
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">⏱️ Paket Berlangganan</h4>
-                        <div class="grid grid-cols-3 gap-2 text-xs">
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 2.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">1 Minggu</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 5.000</span></div>
-                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block text-[10px]">1 Bulan</span><span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 15.000</span></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👑 Tingkat Lisensi Kemitraan</h4>
-                        <div class="space-y-2 text-xs">
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Full Up</span><span class="text-[10px] text-slate-400">Sender Global + Pembaruan</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 25.000</span>
-                            </div>
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Reseller</span><span class="text-[10px] text-slate-400">Bisa Jualan + Bot Jualan + Grup</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 40.000</span>
-                            </div>
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                <div><span class="font-bold text-white block text-xs">Partner</span><span class="text-[10px] text-slate-400">Semua Hak Reseller + Badge Partner</span></div>
-                                <span class="font-bold text-teal-400 text-xs sm:text-sm">Rp 50.000</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Fitur Vilain -->
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                        <p class="font-bold text-teal-400 mb-1">⚡ Fitur Bug & Tools Vilain:</p>
-                        <p>• Forclose Slow X Delay Hard, FC Click, Blank X Delay, Freeze Chat</p>
-                        <p>• DDoS, Network Tools, OSINT Tools, Downloader</p>
-                    </div>
-                </div>
-
-                <div class="mt-6 flex gap-2">
-                    <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Vilain%20Engine" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
-                    </a>
-                    <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5">
-                        <i class="fa-brands fa-telegram text-sm"></i> Order Tele
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="border-t border-slate-800 bg-slate-900/50 py-8 sm:py-12 mt-8 sm:mt-12">
-        <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500">
-            <p class="font-semibold text-slate-300 mb-2">HAYTOR DIGITAL SOLUTIONS</p>
-            <div class="flex justify-center items-center gap-4 my-3 text-slate-400">
-                <a href="https://t.me/jengkoler" target="_blank" class="hover:text-sky-400 flex items-center gap-1">
-                    <i class="fa-brands fa-telegram"></i> @jengkoler
-                </a>
-                <span>•</span>
-                <a href="https://wa.me/6285770059860" target="_blank" class="hover:text-emerald-400 flex items-center gap-1">
-                    <i class="fa-brands fa-whatsapp"></i> 085770059860
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-20 text-center relative">
+            <span class="bg-teal-500/10 text-teal-400 border border-teal-500/30 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase inline-flex items-center gap-2 mb-4 shadow-sm shadow-teal-500/20">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                Next-Gen Software & Automation Utility
+            </span>
+            <h1 class="text-3xl sm:text-6xl font-black text-white tracking-tight mb-4 sm:mb-6 leading-tight">
+                Solusi Perangkat Lunak & <br><span class="gradient-text">Lisensi Otomasi Digital</span>
+            </h1>
+            <p class="text-slate-400 text-xs sm:text-base max-w-2xl mx-auto mb-8 px-2 leading-relaxed">
+                Pusat penyediaan aplikasi otomasi, skrip integrasi pesan, dan lisensi kemitraan digital berkinerja tinggi untuk mendukung efisiensi operasional Anda.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#products" class="relative group bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition shadow-xl shadow-teal-500/25 overflow-hidden">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fa-solid fa-rocket"></i> Lihat Katalog Produk
+                    </span>
                 </a>
             </div>
-            <p>© 2026 Haytor.tech. All rights reserved.</p>
-        </div>
-    </footer>
+        </section>
 
+        <!-- Product Catalog Grid -->
+        <section id="products" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+            <div class="text-center mb-10 sm:mb-14">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-2 tracking-tight">Katalog Produk & Paket Lisensi</h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Pilih produk dan tingkat lisensi sesuai kebutuhan operasional Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+                <!-- PRODUK 1: HOLLOW APK -->
+                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[10px] font-bold text-teal-400 uppercase tracking-widest bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">Utility Engine</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">HOLLOW APP</h3>
+                            </div>
+                            <span class="bg-slate-800/80 text-teal-300 text-[10px] px-2.5 py-1 rounded-full border border-teal-500/30 flex items-center gap-1">
+                                <i class="fa-solid fa-bolt text-[9px]"></i> No-Telegram
+                            </span>
+                        </div>
+                        <p class="text-slate-400 text-xs mb-5">Aplikasi otomasi serbaguna tanpa butuh Telegram, hanya WhatsApp saja.</p>
+
+                        <!-- Paket Basic -->
+                        <div class="mb-5">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-box text-teal-400"></i> Paket Basic Access
+                            </h4>
+                            <div class="grid grid-cols-3 gap-2 text-xs">
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 3.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">2 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 5.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">5 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 8.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">7 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 10.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">14 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 13.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">21 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 14.000</span></div>
+                            </div>
+                        </div>
+
+                        <!-- VIP -->
+                        <div class="mb-5">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-crown text-amber-400"></i> Paket VIP
+                            </h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs mb-1">
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80"><span class="text-slate-400 block text-[10px]">VIP 1 Bulan</span><span class="font-bold text-teal-400 text-xs">Rp 25.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80"><span class="text-slate-400 block text-[10px]">VIP Permanent</span><span class="font-bold text-teal-400 text-xs">Rp 50.000</span></div>
+                            </div>
+                            <p class="text-[10px] text-slate-400">✓ Fitur bug terbuka (Tidak bisa jualan).</p>
+                        </div>
+
+                        <!-- Role Kemitraan -->
+                        <div class="mb-4">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-shield text-cyan-400"></i> Kemitraan & Lisensi
+                            </h4>
+                            <div class="space-y-1.5 text-xs">
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Reseller</span><span class="text-[10px] text-slate-400">Bisa jualan + Bug terbuka</span></div>
+                                    <span class="font-bold text-teal-400">Rp 80.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Partner</span><span class="text-[10px] text-slate-400">Sender Global + Jualan in-app</span></div>
+                                    <span class="font-bold text-teal-400">Rp 100.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Tangan Kanan</span><span class="text-[10px] text-slate-400">Akses tinggi + Prioritas support</span></div>
+                                    <span class="font-bold text-teal-400">Rp 130.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">PT Pribadi</span><span class="text-[10px] text-slate-400">Akses Penuh + Benefit Tertinggi</span></div>
+                                    <span class="font-bold text-teal-400">Rp 160.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Detail Fitur -->
+                        <details class="group/detail mt-3">
+                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                                <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
+                                <span>Lihat Detail Fitur & Tools Holow</span>
+                            </summary>
+                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">⚡ Fitur Bug:</p>
+                                    <p class="text-slate-400">NewFunc, Force Close Invisible, Force Close iOS, Delay Invisible Hard, Delay Hard With Crash, Kill System UI, Crash iOS, Crash No Click, Crash Notif, Combo Setan, Bulldozer, Bug Group, Chat Global.</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">🔧 Tools Apps:</p>
+                                    <p class="text-slate-400">Domain Report, Port Scanner, Custom Theme & Background, AI Chat Asik, Sender Global, Digital Al-Qur'an, Baca Komik/Manhwa, Anime, Nonton Dracin/Donghua, Fix TikTok/IG Downloader, QR Generator.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="mt-6 flex gap-2">
+                        <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Hollow%20App" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
+                        </a>
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                            <i class="fa-brands fa-telegram text-sm"></i> Order Tele
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUK 2: MANTAX -->
+                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[10px] font-bold text-teal-400 uppercase tracking-widest bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">System Engine</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">MANTAX UTILITY</h3>
+                            </div>
+                            <span class="bg-amber-500/10 text-amber-400 text-[10px] px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1 font-semibold">
+                                <i class="fa-brands fa-telegram text-[10px]"></i> Wajib Telegram
+                            </span>
+                        </div>
+                        <p class="text-slate-400 text-xs mb-5">Engine otomasi pesan canggih dengan integrasi grup Telegram dan update berkala.</p>
+
+                        <!-- Harga Paket Mantax -->
+                        <div class="space-y-2 mb-4">
+                            <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                <div><span class="font-bold text-white text-xs block">1 Hari (Trial)</span><span class="text-[10px] text-slate-400">Hanya testi</span></div>
+                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">Rp 5.000</span><span class="font-bold text-teal-400 text-xs block">Rp 3.000</span></div>
+                            </div>
+                            <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                <div><span class="font-bold text-white text-xs block">Full Update</span><span class="text-[10px] text-slate-400">Sender Global + Grup Mantax</span></div>
+                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">Rp 60.000</span><span class="font-bold text-teal-400 text-xs block">Rp 40.000</span></div>
+                            </div>
+                            <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                <div><span class="font-bold text-white text-xs block">Reseller</span><span class="text-[10px] text-slate-400">Bisa jualan + Grup Mantax</span></div>
+                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">Rp 80.000</span><span class="font-bold text-teal-400 text-xs block">Rp 70.000</span></div>
+                            </div>
+                            <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                <div><span class="font-bold text-white text-xs block">Partner</span><span class="text-[10px] text-slate-400">Bisa jualan + Grup Mantax</span></div>
+                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">Rp 100.000</span><span class="font-bold text-teal-400 text-xs block">Rp 90.000</span></div>
+                            </div>
+                            <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                <div><span class="font-bold text-white text-xs block">TK / Staff</span><span class="text-[10px] text-slate-400">Otoritas manajemen penuh</span></div>
+                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">Rp 150.000</span><span class="font-bold text-teal-400 text-xs block">Rp 130.000</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Detail Fitur -->
+                        <details class="group/detail mt-3">
+                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                                <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
+                                <span>Lihat Detail Fitur, Tools & Benefit Mantax</span>
+                            </summary>
+                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">⚡ Fitur Bug Mantax:</p>
+                                    <p class="text-slate-400">Delay Aman Nokos, FC iOS Invisible, Delay Invisible, Delay UI Delete, Bug UI, Spam Call, Fitur RAT, Sadap, Bug Custom, Spam Pairing.</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">🔧 Tools Mantax:</p>
+                                    <p class="text-slate-400">Bisa Nabung Duit, AI Tools, Network, Osint, Anime 18+, Downloader, Generator, Cek Ban WA Sendiri, Pasang Ubot.</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">🕷 Benefit Tambahan:</p>
+                                    <p class="text-slate-400">Free SC via Telegram & WA Manta, Free Tutor Run SC, Add Sender & Cara Bug, Free Bot + Grup.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="mt-6 flex gap-2">
+                        <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Mantax%20Utility" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
+                        </a>
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                            <i class="fa-brands fa-telegram text-sm"></i> Order Tele
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUK 3: SYAM APK -->
+                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[10px] font-bold text-teal-400 uppercase tracking-widest bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">Standalone App</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">SYAM AUTOMATION</h3>
+                            </div>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] px-2.5 py-1 rounded-full border border-emerald-500/30 flex items-center gap-1 font-semibold">
+                                <i class="fa-solid fa-mobile-screen text-[10px]"></i> APK Bug & RAT
+                            </span>
+                        </div>
+
+                        <!-- Keunggulan Syam -->
+                        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800/80 mb-4 text-[11px] space-y-1.5 text-slate-300">
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-teal-400"></i> Tanpa Telegram — Cukup pakai WhatsApp!</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-teal-400"></i> Update Gratis & Login Aman via Gmail</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-teal-400"></i> Full Panduan Video Penggunaan Lengkap</p>
+                        </div>
+
+                        <!-- Trial -->
+                        <div class="mb-4">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock text-teal-400"></i> Harga Trial
+                            </h4>
+                            <div class="grid grid-cols-3 gap-2 text-xs">
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 2.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">7 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 10.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">30 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 20.000</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Role Syam -->
+                        <div class="mb-4">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-shield-halved text-cyan-400"></i> Role Apps & Script
+                            </h4>
+                            <div class="space-y-1.5 text-xs">
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Full Update</span><span class="text-[10px] text-slate-400">App + Script + Sender Global</span></div>
+                                    <span class="font-bold text-teal-400">Rp 40.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Reseller</span><span class="text-[10px] text-slate-400">Bisa Jualan + Sender Global + Grup</span></div>
+                                    <span class="font-bold text-teal-400">Rp 80.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Detail Fitur -->
+                        <details class="group/detail mt-3">
+                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                                <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
+                                <span>Lihat Detail Fitur & Tools Syam</span>
+                            </summary>
+                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">⚡ Menu Bug Syam:</p>
+                                    <p class="text-slate-400">Delay, Delay Visib, FC Android Ori/Bisnis, FC iOS Invisible, Crash UI, Spam Call, Crash Click, Bug Grup, SC Gratis, Termux / Ubuntu.</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">🔧 Tools Syam:</p>
+                                    <p class="text-slate-400">Memiliki 3 RAT dalam 1 APK, Nabung Duit, AI Tools/Gemini, Network, Osint, Anime 18+, Downloader, Generator, Cek Ban WA, Pasang Ubot, Install VPS/Panel, Custom Tema/Warna, Unbot Telegram.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="mt-6 flex gap-2">
+                        <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Syam%20Automation" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
+                        </a>
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                            <i class="fa-brands fa-telegram text-sm"></i> Order Tele
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUK 4: VILAIN SYSTEM -->
+                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[10px] font-bold text-teal-400 uppercase tracking-widest bg-teal-500/10 px-2 py-0.5 rounded border border-teal-500/20">Fast Engine</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">VILAIN ENGINE</h3>
+                            </div>
+                            <span class="bg-amber-500/10 text-amber-400 text-[10px] px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1 font-semibold">
+                                <i class="fa-brands fa-telegram text-[10px]"></i> Wajib Telegram
+                            </span>
+                        </div>
+                        <p class="text-slate-400 text-xs mb-5">Engine otomasi cepat dengan optimasi integrasi jaringan Telegram efisiensi tinggi.</p>
+
+                        <!-- Paket Berlangganan -->
+                        <div class="mb-4">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-calendar-days text-teal-400"></i> Paket Berlangganan
+                            </h4>
+                            <div class="grid grid-cols-3 gap-2 text-xs">
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">1 Hari</span><span class="font-bold text-teal-400 text-xs">Rp 2.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">1 Minggu</span><span class="font-bold text-teal-400 text-xs">Rp 5.000</span></div>
+                                <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-center"><span class="text-slate-400 block text-[10px]">1 Bulan</span><span class="font-bold text-teal-400 text-xs">Rp 15.000</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Role Vilain -->
+                        <div class="mb-4">
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-crown text-amber-400"></i> Role & Benefit
+                            </h4>
+                            <div class="space-y-1.5 text-xs">
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Full Up</span><span class="text-[10px] text-slate-400">Sender Global</span></div>
+                                    <span class="font-bold text-teal-400">Rp 25.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Reseller</span><span class="text-[10px] text-slate-400">Bisa jualan + Bot Jualan + Grup Tele</span></div>
+                                    <span class="font-bold text-teal-400">Rp 40.000</span>
+                                </div>
+                                <div class="bg-slate-950/80 p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                                    <div><span class="font-bold text-white block">Partner</span><span class="text-[10px] text-slate-400">Reseller + Badge Logo Partner Resmi</span></div>
+                                    <span class="font-bold text-teal-400">Rp 50.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Detail Fitur -->
+                        <details class="group/detail mt-3">
+                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                                <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
+                                <span>Lihat Detail Fitur Bug & APK Vilain</span>
+                            </summary>
+                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">⚡ Fitur Bug Vilain:</p>
+                                    <p class="text-slate-400">Forclose Slow X Delay Hard Invisible, Forclose Click One Msg, Crash UI Andro, Blank X Delay One Msg, Delay X Freeze Chat, Delay Hard Invisible, Delay Invisible, Bug Group, Custom Bug.</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-teal-400 mb-0.5">🔧 Fitur APK Vilain:</p>
+                                    <p class="text-slate-400">DDoS, Network Tools, Osint Tools, Downloader.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="mt-6 flex gap-2">
+                        <a href="https://wa.me/6285770059860?text=Halo,%20saya%20mau%20order%20Vilain%20Engine" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
+                        </a>
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                            <i class="fa-brands fa-telegram text-sm"></i> Order Tele
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer Baru Dengan Penjelasan Aplikasi -->
+        <footer id="about" class="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md py-10 sm:py-14 mt-12">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <p class="font-extrabold text-white text-sm sm:text-base tracking-wider mb-2">HAYTOR DIGITAL SOLUTIONS</p>
+                
+                <!-- Deskripsi Fungsionalitas Aplikasi -->
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto mb-6">
+                    Aplikasi ini dirancang sebagai platform utility & otomasi terintegrasi untuk mendukung efisiensi pengiriman pesan, pemantauan jaringan, serta penyediaan tools pendukung digital seperti AI Assistant, Network OSINT, Media Downloader, dan manajemen kemitraan reseller dalam satu sistem yang tangguh.
+                </p>
+
+                <div class="flex justify-center items-center gap-2 text-[10px] sm:text-xs text-teal-400/80 font-medium mb-4">
+                    <span>⚡ High Performance Utility</span>
+                    <span>•</span>
+                    <span>🔒 Safe Access Management</span>
+                    <span>•</span>
+                    <span>🌐 Global Integration Engine</span>
+                </div>
+
+                <p class="text-slate-600 text-[11px]">© 2026 Haytor.tech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Background Particle Script -->
+    <script>
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 120 };
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 15000);
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    radius: Math.random() * 1.8 + 0.5,
+                    color: Math.random() > 0.5 ? '#2dd4bf' : '#38bdf8'
+                });
+            }
+        }
+
+        window.addEventListener('resize', initCanvas);
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+
+                // Connect particles near each other
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dx = p.x - p2.x;
+                    let dy = p.y - p2.y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(45, 212, 191, ${1 - dist / 100})`;
+                        ctx.lineWidth = 0.3;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        initCanvas();
+        animate();
+    </script>
 </body>
 </html>
