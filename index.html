@@ -3,57 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAY TOR</title>
+    <title>HAYTOR - Digital Solutions & Software Utility</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900">
 
-    <!-- Header / Navbar -->
-    <header class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800">
-        <h1 class="text-xl font-bold tracking-wider text-teal-400">HAYTOR<span class="text-white">.TECH</span></h1>
-        <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-slate-900 font-semibold px-4 py-2 rounded-lg transition">Kontak Saya</a>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid font-bold text-teal-400 text-2xl fa-microchip"></i>
+                <span class="text-xl font-extrabold tracking-wider text-white">HAYTOR<span class="text-teal-400">.TECH</span></span>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-300">
+                <a href="#products" class="hover:text-teal-400 transition">Produk & Layanan</a>
+                <a href="#features" class="hover:text-teal-400 transition">Keunggulan</a>
+                <a href="#contact" class="hover:text-teal-400 transition">Kontak</a>
+            </nav>
+            <a href="https://wa.me/6287837066790" target="_blank" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Sales
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Halo, Saya <span class="text-teal-400">Elga Bifardika Elfanda</span>
-        </h2>
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
-            AI Data Annotator, Linguistic Evaluator, & Automation Developer. Fokus pada pengoptimalan alur kerja digital dan pembuatan aset vektor.
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase inline-block mb-4">
+            Next-Gen Software & Automation Utility
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+            Solusi Perangkat Lunak & <br class="hidden sm:inline"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Lisensi Otomasi Digital</span>
+        </h1>
+        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+            Pusat penyediaan aplikasi otomasi, skrip integrasi pesan, dan lisensi kemitraan digital berkinerja tinggi untuk mendukung efisiensi bisnis Anda.
         </p>
-        <div class="flex justify-center gap-4">
-            <a href="#about" class="border border-slate-700 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-medium transition">Tentang Saya</a>
-            <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-slate-900 px-6 py-3 rounded-lg font-medium transition">Hubungi Saya</a>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#products" class="bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-teal-500/20">
+                Lihat Katalog Produk
+            </a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="bg-slate-800/50 py-16 border-y border-slate-800">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-2xl font-bold text-white mb-6">Keahlian & Layanan</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                    <h4 class="text-teal-400 font-bold mb-2">AI Data & Annotation</h4>
-                    <p class="text-sm text-slate-400">Pengujian kualitas data AI, evaluasi linguistik, serta transkripsi audio berstandar tinggi.</p>
+    <!-- Product Catalog Grid -->
+    <section id="products" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2">Katalog Produk & Paket Lisensi</h2>
+            <p class="text-slate-400 text-sm">Pilih produk dan tingkatan lisensi sesuai kebutuhan operasional Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- PRODUK 1: HOLLOW APK -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">Utility Engine</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">HOLLOW APP</h3>
+                        </div>
+                        <span class="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Mobile Utility</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Aplikasi otomasi serbaguna dengan manajemen akses terstruktur dan fleksibilitas durasi penggunaan.</p>
+
+                    <!-- Tabs/Section: Basic & VIP -->
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">📦 Paket Akses Pengguna</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 1 Hari</span><span class="font-bold text-teal-400">Rp 3.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 2 Hari</span><span class="font-bold text-teal-400">Rp 5.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 5 Hari</span><span class="font-bold text-teal-400">Rp 8.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 7 Hari</span><span class="font-bold text-teal-400">Rp 10.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 14 Hari</span><span class="font-bold text-teal-400">Rp 13.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">Basic 21 Hari</span><span class="font-bold text-teal-400">Rp 14.000</span></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👑 Lisensi VIP (Full Feature)</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs mb-2">
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800"><span class="text-slate-400 block">VIP 1 Bulan</span><span class="font-bold text-teal-400 text-sm">Rp 25.000</span></div>
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800"><span class="text-slate-400 block">VIP Permanent</span><span class="font-bold text-teal-400 text-sm">Rp 50.000</span></div>
+                        </div>
+                        <p class="text-[11px] text-slate-400">✓ Semua fitur sistem terbuka penuh untuk penggunaan personal.</p>
+                    </div>
+
+                    <!-- Role & Benefit -->
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👥 Kemitraan & Lisensi Distribusi</h4>
+                        <ul class="text-xs space-y-2 text-slate-300">
+                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Reseller Rights</span><span class="text-[11px] text-slate-400">Hak distribusi lisensi + akses fitur penuh</span></div>
+                                <span class="font-bold text-teal-400">Rp 80.000</span>
+                            </li>
+                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Partner Access</span><span class="text-[11px] text-slate-400">In-App Distribution + Integrasi Engine Global</span></div>
+                                <span class="font-bold text-teal-400">Rp 100.000</span>
+                            </li>
+                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Executive Partner</span><span class="text-[11px] text-slate-400">Akses hirarki tinggi + Prioritas Dukungan Teknis</span></div>
+                                <span class="font-bold text-teal-400">Rp 130.000</span>
+                            </li>
+                            <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Enterprise Rights</span><span class="text-[11px] text-slate-400">Akses Sistem Penuh + Seluruh Hak Kemitraan</span></div>
+                                <span class="font-bold text-teal-400">Rp 160.000</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                    <h4 class="text-teal-400 font-bold mb-2">Web Automation</h4>
-                    <p class="text-sm text-slate-400">Pengembangan skrip automasi kustom menggunakan JavaScript, Python, Puppeteer, dan Playwright.</p>
-                </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                    <h4 class="text-teal-400 font-bold mb-2">Vector Illustration</h4>
-                    <p class="text-sm text-slate-400">Desain grafik dan ilustrasi vektor digital untuk platform microstock dan media cetak.</p>
-                </div>
+                <a href="https://wa.me/6287837066790?text=Halo%20HAYTOR,%20saya%20tertarik%20dengan%20produk%20Hollow%20App" target="_blank" class="mt-6 w-full py-2.5 bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-slate-200 text-center font-bold text-xs rounded-xl transition border border-slate-700">Pesan Hollow App</a>
             </div>
+
+            <!-- PRODUK 2: MANTAX -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">System Engine</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">MANTAX UTILITY</h3>
+                        </div>
+                        <span class="bg-teal-500/10 text-teal-400 border border-teal-500/30 text-xs px-3 py-1 rounded-full font-bold">Promo Edition</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Engine integrasi otomatisasi pesan dengan dukungan pembaruan berkala dan grup komunitas terstruktur.</p>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-white text-sm block">Trial 1 Hari</span>
+                                <span class="text-xs text-slate-400">Uji coba fungsionalitas sistem</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through">Rp 5.000</span>
+                                <span class="font-bold text-teal-400 text-base block">Rp 3.000</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-white text-sm block">Full Update Package</span>
+                                <span class="text-xs text-slate-400">Akses Engine Global + Grup Diskusi (Telegram)</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through">Rp 60.000</span>
+                                <span class="font-bold text-teal-400 text-base block">Rp 40.000</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-white text-sm block">Reseller License</span>
+                                <span class="text-xs text-slate-400">Hak Penjualan Kembalian + Komunitas Eksklusif</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through">Rp 80.000</span>
+                                <span class="font-bold text-teal-400 text-base block">Rp 70.000</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-white text-sm block">Partner License</span>
+                                <span class="text-xs text-slate-400">Prioritas Lisensi Mitra + Komunitas Mantax</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through">Rp 100.000</span>
+                                <span class="font-bold text-teal-400 text-base block">Rp 90.000</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 flex justify-between items-center">
+                            <div>
+                                <span class="font-bold text-white text-sm block">Staff / TK Level</span>
+                                <span class="text-xs text-slate-400">Otoritas Manajemen + Kemitraan Penuh</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-500 line-through">Rp 150.000</span>
+                                <span class="font-bold text-teal-400 text-base block">Rp 130.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6287837066790?text=Halo%20HAYTOR,%20saya%20tertarik%20dengan%20produk%20Mantax" target="_blank" class="mt-6 w-full py-2.5 bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-slate-200 text-center font-bold text-xs rounded-xl transition border border-slate-700">Pesan Mantax Utility</a>
+            </div>
+
+            <!-- PRODUK 3: SYAM APK -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">Standalone App</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">SYAM AUTOMATION</h3>
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs px-3 py-1 rounded-full font-bold">No-Telegram Required</span>
+                    </div>
+                    
+                    <!-- Feature Highlights -->
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 mb-6 text-xs space-y-2 text-slate-300">
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Integrasi Otomatis via WhatsApp (Praktis & Tanpa Telegram)</p>
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Pembaruan Aplikasi Gratis Secara Berkala</p>
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Autentikasi Login Aman Berbasis Akun Gmail</p>
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-400"></i> Dilengkapi Panduan Video Penggunaan Lengkap</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">⏱️ Durasi Akses Uji Coba</h4>
+                        <div class="grid grid-cols-3 gap-2 text-xs">
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">1 Hari</span><span class="font-bold text-teal-400">Rp 2.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">7 Hari</span><span class="font-bold text-teal-400">Rp 10.000</span></div>
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 text-center"><span class="text-slate-400 block">30 Hari</span><span class="font-bold text-teal-400">Rp 20.000</span></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">📜 Bundle Aplikasi & Skrip</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Full Update Bundle</span><span class="text-[11px] text-slate-400">App + Script Syam + Engine Message + Group Access</span></div>
+                                <span class="font-bold text-teal-400 text-sm">Rp 40.000</span>
+                            </div>
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Reseller License</span><span class="text-[11px] text-slate-400">Hak Lisensi Jualan + Komunitas Reseller + Syam Engine</span></div>
+                                <span class="font-bold text-teal-400 text-sm">Rp 80.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6287837066790?text=Halo%20HAYTOR,%20saya%20tertarik%20dengan%20Syam%20Automation" target="_blank" class="mt-6 w-full py-2.5 bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-slate-200 text-center font-bold text-xs rounded-xl transition border border-slate-700">Pesan Syam Automation</a>
+            </div>
+
+            <!-- PRODUK 4: VILAIN SYSTEM -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-teal-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">Fast Engine</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">VILAIN ENGINE</h3>
+                        </div>
+                        <span class="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full border border-slate-700">Telegram Integrated</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Engine otomasi cepat dengan optimasi integrasi jaringan Telegram untuk efisiensi tinggi.</p>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">⏱️ Paket Berlangganan</h4>
+                        <div class="grid grid-cols-3 gap-2 text-xs">
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 text-center"><span class="text-slate-400 block">1 Hari</span><span class="font-bold text-teal-400">Rp 2.000</span></div>
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 text-center"><span class="text-slate-400 block">1 Minggu</span><span class="font-bold text-teal-400">Rp 5.000</span></div>
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 text-center"><span class="text-slate-400 block">1 Bulan</span><span class="font-bold text-teal-400">Rp 15.000</span></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1">👑 Tingkat Lisensi Kemitraan</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Full Update</span><span class="text-[11px] text-slate-400">Akses Messaging Engine + Pembaruan Sistem</span></div>
+                                <span class="font-bold text-teal-400 text-sm">Rp 25.000</span>
+                            </div>
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Reseller Partner</span><span class="text-[11px] text-slate-400">Hak Distribusi + Kanal Marketplace + Komunitas Telegram</span></div>
+                                <span class="font-bold text-teal-400 text-sm">Rp 40.000</span>
+                            </li>
+                            <div class="bg-slate-950 p-3 rounded border border-slate-800 flex justify-between items-center">
+                                <div><span class="font-bold text-white block">Official Partner</span><span class="text-[11px] text-slate-400">Seluruh Hak Reseller + Badge Partner Resmi Komunitas</span></div>
+                                <span class="font-bold text-teal-400 text-sm">Rp 50.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/6287837066790?text=Halo%20HAYTOR,%20saya%20tertarik%20dengan%20Vilain%20Engine" target="_blank" class="mt-6 w-full py-2.5 bg-slate-800 hover:bg-teal-500 hover:text-slate-950 text-slate-200 text-center font-bold text-xs rounded-xl transition border border-slate-700">Pesan Vilain Engine</a>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="max-w-4xl mx-auto px-6 py-12 text-center text-slate-500 text-sm">
-        <p class="mb-4">Ingin berkolaborasi atau berdiskusi proyek?</p>
-        <p class="text-slate-300 font-semibold mb-6">elgabifardikaelfanda@gmail.com</p>
-        <p>© 2026 Haytor.tech. All rights reserved.</p>
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-slate-800 bg-slate-900/50 py-12 mt-12">
+        <div class="max-w-6xl mx-auto px-6 text-center text-xs text-slate-500">
+            <p class="font-semibold text-slate-300 mb-2">HAYTOR DIGITAL SOLUTIONS</p>
+            <p class="mb-4">Penyedia Lisensi Automasi & Sistem Perangkat Lunak Digital Terpercaya.</p>
+            <p>© 2026 Haytor.tech. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
