@@ -5,22 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary Meta Tags -->
-<title>HAYTOR STORE - Solusi Digital Untuk Kamu</title>
-<meta name="title" content="HAYTOR STORE - Solusi Digital Untuk Kamu">
-<meta name="description" content="HAYTOR STORE - Trusted, Safe, Fast. Pusat aplikasi, lisensi, dan solusi digital terbaik.">
+<title>HAYTOR STORE - Solusi Digital Kawaii Tech</title>
+<meta name="title" content="HAYTOR STORE - Solusi Digital Kawaii Tech">
+<meta name="description" content="HAYTOR STORE - Trusted, Safe, Fast. Pusat aplikasi, lisensi, dan solusi digital terbaik bergaya kawaii tech.">
 
-<!-- Open Graph (Khusus Telegram & WhatsApp) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haytor.tech/">
-<meta property="og:title" content="HAYTOR STORE - Solusi Digital Untuk Kamu">
+<meta property="og:title" content="HAYTOR STORE - Solusi Digital Kawaii Tech">
 <meta property="og:description" content="HAYTOR STORE - Trusted, Safe, Fast. Pusat aplikasi, lisensi, dan solusi digital terbaik.">
-
-<!-- Trik Memaksa Telegram Fetch Gambar Baru Secara Global -->
 <meta property="og:image" content="https://haytor.tech/banner.jpg?v=2">
-<meta property="og:image:secure_url" content="https://haytor.tech/banner.jpg?v=2">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
     
     <!-- FAVICON -->
@@ -29,15 +23,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .animate-float {
+            animation: floatSlow 4s infinite ease-in-out;
+        }
         @keyframes pulseGlow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.08); }
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.08); }
         }
         .animate-pulse-glow {
-            animation: pulseGlow 6s infinite ease-in-out;
+            animation: pulseGlow 5s infinite ease-in-out;
         }
         .gradient-text {
-            background: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 50%, #818cf8 100%);
+            background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #38bdf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% auto;
@@ -48,29 +49,29 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900 relative min-h-screen overflow-x-hidden">
+<body class="bg-[#0b0716] text-pink-50 font-sans antialiased selection:bg-pink-500 selection:text-white relative min-h-screen overflow-x-hidden">
 
-    <!-- Interactive Background Canvas -->
-    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
+    <!-- Interactive Kawaii Tech Canvas -->
+    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-75"></canvas>
 
-    <!-- Glowing Background Orbs -->
-    <div class="fixed top-1/4 -left-20 w-80 h-80 bg-teal-500/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow z-0"></div>
-    <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[140px] pointer-events-none animate-pulse-glow z-0" style="animation-delay: 3s;"></div>
+    <!-- Glowing Kawaii Orbs -->
+    <div class="fixed top-1/4 -left-20 w-96 h-96 bg-pink-500/15 rounded-full blur-[140px] pointer-events-none animate-pulse-glow z-0"></div>
+    <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-purple-500/15 rounded-full blur-[140px] pointer-events-none animate-pulse-glow z-0" style="animation-delay: 2.5s;"></div>
 
     <div class="relative z-10">
         <!-- Navbar -->
-        <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/80">
+        <header class="sticky top-0 z-50 bg-[#0b0716]/80 backdrop-blur-xl border-b border-pink-500/20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
                 <div onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 group cursor-pointer select-none">
-                    <img src="favicon.png" alt="HAYTOR Logo" class="w-8 h-8 rounded-lg border border-teal-500/40 object-cover">
-                    <span class="text-lg sm:text-xl font-extrabold tracking-wider text-white">HAYTOR<span class="text-teal-400"> STORE</span></span>
+                    <img src="favicon.png" alt="HAYTOR Logo" class="w-9 h-9 rounded-2xl border-2 border-pink-400/60 object-cover shadow-lg shadow-pink-500/30 animate-float">
+                    <span class="text-lg sm:text-xl font-extrabold tracking-wider text-white">HAYTOR<span class="text-pink-400"> CAT.TECH</span></span>
                 </div>
                 <div class="flex items-center gap-2 sm:gap-3">
-                    <a href="https://t.me/jengkoler" target="_blank" class="bg-sky-500/10 border border-sky-500/30 hover:bg-sky-500 hover:text-white text-sky-400 font-semibold px-3 py-1.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-sky-500/5">
+                    <a href="https://t.me/jengkoler" target="_blank" class="bg-sky-500/10 border border-sky-400/30 hover:bg-sky-500 hover:text-white text-sky-300 font-semibold px-3 py-1.5 rounded-2xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-sky-500/10">
                         <i class="fa-brands fa-telegram text-sm sm:text-base"></i>
                         <span>Telegram</span>
                     </a>
-                    <a href="https://wa.me/6285770059860" target="_blank" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold px-3.5 py-1.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-emerald-500/20">
+                    <a href="https://wa.me/6285770059860" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 text-white font-bold px-3.5 py-1.5 rounded-2xl text-xs sm:text-sm transition flex items-center gap-1.5 shadow-lg shadow-pink-500/30">
                         <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
                         <span>WhatsApp</span>
                     </a>
@@ -79,33 +80,33 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16 text-center relative">
-            <span class="bg-teal-500/10 text-teal-400 border border-teal-500/30 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-widest uppercase inline-flex items-center gap-2 mb-4 shadow-sm shadow-teal-500/20">
-                <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
-                Solusi Perangkat Lunak & Otomasi Modern
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-20 text-center relative">
+            <span class="bg-pink-500/10 text-pink-300 border border-pink-500/30 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase inline-flex items-center gap-2 mb-4 shadow-md shadow-pink-500/10">
+                <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span>
+                🐾 Kawaii Tech & Otomasi Modern 🐱
             </span>
             <h1 class="text-3xl sm:text-6xl font-black text-white tracking-tight mb-4 sm:mb-6 leading-tight">
-                Solusi Perangkat Lunak & <br><span class="gradient-text">Lisensi Otomasi Digital</span>
+                Solusi Perangkat Lunak & <br><span class="gradient-text">Lisensi Digital Lucu & Handal</span>
             </h1>
-            <p class="text-slate-400 text-xs sm:text-base max-w-2xl mx-auto mb-6 px-2 leading-relaxed">
-                Pusat penyediaan aplikasi otomasi, skrip integrasi pesan, dan lisensi kemitraan digital berkinerja tinggi untuk mendukung efisiensi operasional Anda.
+            <p class="text-pink-200/70 text-xs sm:text-base max-w-2xl mx-auto mb-6 px-2 leading-relaxed">
+                Pusat penyediaan aplikasi otomasi, skrip integrasi pesan, dan lisensi kemitraan digital berkinerja tinggi ditemani maskot kucing imut untuk efisiensi operasional Anda.
             </p>
 
             <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <a href="https://whatsapp.com/channel/0029Vb8GPz5GehEIelnEsg3b" target="_blank" class="bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500 hover:text-slate-950 text-amber-400 font-bold px-4 py-2 rounded-xl text-xs transition flex items-center gap-2 shadow-lg shadow-amber-500/10">
+                <a href="https://whatsapp.com/channel/0029Vb8GPz5GehEIelnEsg3b" target="_blank" class="bg-amber-500/10 border border-amber-400/30 hover:bg-amber-500 hover:text-slate-950 text-amber-300 font-bold px-4 py-2 rounded-2xl text-xs transition flex items-center gap-2 shadow-lg shadow-amber-500/10">
                     <i class="fa-solid fa-star text-amber-400"></i>
                     <span>Cek Testimoni Pembeli</span>
                 </a>
-                <a href="https://whatsapp.com/channel/0029VbCRTkuJ93wXdEgvm71g" target="_blank" class="bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold px-4 py-2 rounded-xl text-xs transition flex items-center gap-2 shadow-lg shadow-emerald-500/10">
+                <a href="https://whatsapp.com/channel/0029VbCRTkuJ93wXdEgvm71g" target="_blank" class="bg-emerald-500/10 border border-emerald-400/30 hover:bg-emerald-500 hover:text-slate-950 text-emerald-300 font-bold px-4 py-2 rounded-2xl text-xs transition flex items-center gap-2 shadow-lg shadow-emerald-500/10">
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>Saluran Resmi HAYTOR</span>
                 </a>
             </div>
 
             <div class="flex justify-center gap-4">
-                <a href="#products" class="relative group bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition shadow-xl shadow-teal-500/25 overflow-hidden">
+                <a href="#products" class="relative group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-bold px-7 py-3.5 rounded-2xl text-xs sm:text-sm transition shadow-xl shadow-pink-500/30 overflow-hidden">
                     <span class="relative z-10 flex items-center gap-2">
-                        <i class="fa-solid fa-rocket"></i> Lihat Katalog Produk
+                        <i class="fa-solid fa-cat"></i> Lihat Katalog Produk Meow
                     </span>
                 </a>
             </div>
@@ -113,37 +114,37 @@
 
         <!-- SECTION: LANGKAH PEMESANAN (HOW TO ORDER) -->
         <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-            <div class="bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-slate-800/80 p-6 sm:p-8">
+            <div class="bg-[#130e24]/90 backdrop-blur-xl rounded-3xl border border-pink-500/25 p-6 sm:p-8 shadow-2xl shadow-pink-950/50">
                 <div class="text-center mb-8">
-                    <span class="text-teal-400 text-xs font-bold uppercase tracking-widest">Cara Transaksi Mudah</span>
+                    <span class="text-pink-400 text-xs font-bold uppercase tracking-widest">🐾 Panduan Transaksi Kilat 🐾</span>
                     <h2 class="text-xl sm:text-3xl font-extrabold text-white mt-1">5 Langkah Praktis Pemesanan</h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
-                    <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-400 font-bold flex items-center justify-center text-sm mb-3">1</div>
+                    <div class="bg-[#0b0716]/90 p-4 rounded-2xl border border-pink-500/20 flex flex-col items-center hover:border-pink-400/50 transition">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-bold flex items-center justify-center text-sm mb-3">1</div>
                         <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Pilih Layanan</h3>
-                        <p class="text-slate-400 text-[11px]">Klik paket harga/role pada katalog produk sesuai kebutuhan.</p>
+                        <p class="text-pink-200/60 text-[11px]">Klik paket harga/role pada katalog produk sesuai kebutuhan.</p>
                     </div>
-                    <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-400 font-bold flex items-center justify-center text-sm mb-3">2</div>
+                    <div class="bg-[#0b0716]/90 p-4 rounded-2xl border border-pink-500/20 flex flex-col items-center hover:border-pink-400/50 transition">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-bold flex items-center justify-center text-sm mb-3">2</div>
                         <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Chat Admin</h3>
-                        <p class="text-slate-400 text-[11px]">WhatsApp akan terbuka otomatis dengan format pesan instan.</p>
+                        <p class="text-pink-200/60 text-[11px]">WhatsApp akan terbuka otomatis dengan format pesan instan.</p>
                     </div>
-                    <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-400 font-bold flex items-center justify-center text-sm mb-3">3</div>
+                    <div class="bg-[#0b0716]/90 p-4 rounded-2xl border border-pink-500/20 flex flex-col items-center hover:border-pink-400/50 transition">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-bold flex items-center justify-center text-sm mb-3">3</div>
                         <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Pembayaran</h3>
-                        <p class="text-slate-400 text-[11px]">Lakukan pembayaran sesuai metode yang diberikan oleh admin.</p>
+                        <p class="text-pink-200/60 text-[11px]">Lakukan pembayaran sesuai metode yang diberikan oleh admin.</p>
                     </div>
-                    <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-400 font-bold flex items-center justify-center text-sm mb-3">4</div>
+                    <div class="bg-[#0b0716]/90 p-4 rounded-2xl border border-pink-500/20 flex flex-col items-center hover:border-pink-400/50 transition">
+                        <div class="w-10 h-10 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-300 font-bold flex items-center justify-center text-sm mb-3">4</div>
                         <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Aktivasi ID</h3>
-                        <p class="text-slate-400 text-[11px]">Tunggu beberapa menit hingga lisensi/ID aplikasi Anda diaktifkan.</p>
+                        <p class="text-pink-200/60 text-[11px]">Tunggu beberapa menit hingga lisensi/ID aplikasi Anda diaktifkan.</p>
                     </div>
-                    <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800/80 flex flex-col items-center sm:col-span-2 lg:col-span-1">
-                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-bold flex items-center justify-center text-sm mb-3">5</div>
+                    <div class="bg-[#0b0716]/90 p-4 rounded-2xl border border-pink-500/20 flex flex-col items-center sm:col-span-2 lg:col-span-1 hover:border-emerald-400/50 transition">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold flex items-center justify-center text-sm mb-3">5</div>
                         <h3 class="font-bold text-white text-xs sm:text-sm mb-1">Selesai & Siap Pakai</h3>
-                        <p class="text-slate-400 text-[11px]">Login ke aplikasi dan nikmati seluruh fitur lengkapnya!</p>
+                        <p class="text-pink-200/60 text-[11px]">Login ke aplikasi dan nikmati seluruh fitur lengkapnya!</p>
                     </div>
                 </div>
             </div>
@@ -152,352 +153,352 @@
         <!-- Product Catalog Grid -->
         <section id="products" class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
             <div class="text-center mb-10 sm:mb-14">
-                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-2 tracking-tight">LIST PRODUK HAYTOR STORE</h2>
-                <p class="text-slate-400 text-xs sm:text-sm">Klik langsung pada paket harga untuk melakukan pemesanan instan via WhatsApp.</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mb-2 tracking-tight">🐱 LIST PRODUK HAYTOR STORE 🐾</h2>
+                <p class="text-pink-200/70 text-xs sm:text-sm">Klik langsung pada paket harga untuk melakukan pemesanan instan via WhatsApp.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
                 <!-- PRODUK 1: HOLOW V14 -->
-                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                <div class="group bg-[#130e24]/80 backdrop-blur-xl rounded-3xl border border-pink-500/20 hover:border-pink-400/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/15">
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">1. HOLOW V14</h3>
                             </div>
-                            <span class="bg-slate-800/80 text-teal-300 text-[10px] px-2.5 py-1 rounded-full border border-teal-500/30 flex items-center gap-1">
+                            <span class="bg-pink-500/15 text-pink-300 text-[10px] px-3 py-1 rounded-full border border-pink-500/30 flex items-center gap-1 font-medium">
                                 <i class="fa-solid fa-bolt text-[9px]"></i> Tanpa Telegram
                             </span>
                         </div>
-                        <p class="text-slate-400 text-xs mb-5">Aplikasi bug sistem dan utility pendukung lengkap, cukup menggunakan WhatsApp saja.</p>
+                        <p class="text-pink-200/70 text-xs mb-5">Aplikasi bug sistem dan utility pendukung lengkap, cukup menggunakan WhatsApp saja.</p>
 
                         <div class="mb-5 space-y-2">
-                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2 border-b border-slate-800 pb-1 flex items-center gap-1.5">
-                                <i class="fa-solid fa-box text-teal-400"></i> Paket Access & Kemitraan
+                            <h4 class="text-[11px] font-bold uppercase tracking-wider text-pink-300 mb-2 border-b border-pink-500/20 pb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-box text-pink-400"></i> Paket Access & Kemitraan
                             </h4>
                             <div class="grid grid-cols-2 gap-2 text-xs">
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Basic%201%20Hari*%20seharga%20*Rp%203.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Basic 1 Hari</span><span class="font-bold text-teal-400">3.000</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Basic%201%20Hari*%20seharga%20*Rp%203.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Basic 1 Hari</span><span class="font-bold text-pink-300">3.000</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Basic%207%20Hari*%20seharga%20*Rp%2010.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Basic 7 Hari</span><span class="font-bold text-teal-400">10.000</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Basic%207%20Hari*%20seharga%20*Rp%2010.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Basic 7 Hari</span><span class="font-bold text-pink-300">10.000</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*1%20Bulan*%20seharga%20*Rp%2025.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">1 Bulan</span><span class="font-bold text-teal-400">Rp25.000</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*1%20Bulan*%20seharga%20*Rp%2025.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">1 Bulan</span><span class="font-bold text-pink-300">Rp25.000</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Permanen*%20seharga%20*Rp%2055.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Permanen</span><span class="font-bold text-teal-400">Rp55.000</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Permanen*%20seharga%20*Rp%2055.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Permanen</span><span class="font-bold text-pink-300">Rp55.000</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Reseller*%20seharga%20*Rp%2085.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Reseller</span><span class="font-bold text-teal-400">Rp 85.000</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Reseller*%20seharga%20*Rp%2085.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Reseller</span><span class="font-bold text-pink-300">Rp 85.000</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Partner*%20seharga%20*Rp%20100.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Partner</span><span class="font-bold text-teal-400">100k</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Partner*%20seharga%20*Rp%20100.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Partner</span><span class="font-bold text-pink-300">100k</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Tangan%20Kanan*%20seharga%20*Rp%20130.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">Tangan Kanan</span><span class="font-bold text-teal-400">130k</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*Tangan%20Kanan*%20seharga%20*Rp%20130.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">Tangan Kanan</span><span class="font-bold text-pink-300">130k</span>
                                 </a>
-                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*PT%20Pribadi*%20seharga%20*Rp%20160.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                    <span class="text-slate-400 text-[11px]">PT Pribadi</span><span class="font-bold text-teal-400">160k</span>
+                                <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*HOLOW%20V14*%20paket%20*PT%20Pribadi*%20seharga%20*Rp%20160.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                    <span class="text-pink-200/70 text-[11px]">PT Pribadi</span><span class="font-bold text-pink-300">160k</span>
                                 </a>
                             </div>
                         </div>
 
                         <!-- Detail Fitur Holow V14 -->
                         <details class="group/detail mt-3">
-                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                            <summary class="cursor-pointer text-xs font-semibold text-pink-400 hover:text-pink-300 flex items-center gap-2 py-1 select-none">
                                 <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
                                 <span>Lihat Detail Fitur Holow V14</span>
                             </summary>
-                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                            <div class="mt-2 bg-[#0b0716] p-3 rounded-2xl border border-pink-500/20 text-[11px] text-pink-100/80 space-y-2">
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
-                                    <p class="text-slate-400">Pemanfaatan eksploitasi celah sistem terbaru, penutupan paksa aplikasi secara tersembunyi untuk Android dan iOS, jeda waktu ekstrem, pemadaman tampilan antarmuka sistem, kombinasi gangguan sistem ganda, penekanan jaringan untuk menguras data target, serta gangguan pada obrolan grup dan global.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
+                                    <p class="text-pink-200/70">Pemanfaatan eksploitasi celah sistem terbaru, penutupan paksa aplikasi secara tersembunyi untuk Android dan iOS, jeda waktu ekstrem, pemadaman tampilan antarmuka sistem, kombinasi gangguan sistem ganda, penekanan jaringan untuk menguras data target, serta gangguan pada obrolan grup dan global.</p>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">PERKAKAS APLIKASI & HIBURAN</p>
-                                    <p class="text-slate-400">Dilengkapi laporan domain, pemindai jalur jaringan, pengatur tema dan latar belakang, asisten obrolan cerdas, pengirim pesan global, Al-Qur'an digital, pembaca komik/manhwa, pemutar anime dan serial drama, serta perbaikan pengunduh media sosial dan pembuat kode QR.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">PERKAKAS APLIKASI & HIBURAN</p>
+                                    <p class="text-pink-200/70">Dilengkapi laporan domain, pemindai jalur jaringan, pengatur tema dan latar belakang, asisten obrolan cerdas, pengirim pesan global, Al-Qur'an digital, pembaca komik/manhwa, pemutar anime dan serial drama, serta perbaikan pengunduh media sosial dan pembuat kode QR.</p>
                                 </div>
                             </div>
                         </details>
                     </div>
 
                     <div class="mt-6 flex gap-2">
-                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*HOLOW%20V14*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*HOLOW%20V14*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
                         </a>
-                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
                             <i class="fa-brands fa-telegram text-sm"></i> Order Tele
                         </a>
                     </div>
                 </div>
 
                 <!-- PRODUK 2: VILIAN CRASH -->
-                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                <div class="group bg-[#130e24]/80 backdrop-blur-xl rounded-3xl border border-pink-500/20 hover:border-pink-400/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/15">
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">2. VILIAN CRASH</h3>
                             </div>
-                            <span class="bg-slate-800/80 text-teal-300 text-[10px] px-2.5 py-1 rounded-full border border-teal-500/30 flex items-center gap-1">
+                            <span class="bg-pink-500/15 text-pink-300 text-[10px] px-3 py-1 rounded-full border border-pink-500/30 flex items-center gap-1 font-medium">
                                 <i class="fa-solid fa-bolt text-[9px]"></i> Tanpa Telegram
                             </span>
                         </div>
-                        <p class="text-slate-400 text-xs mb-5">Tools perkakas digital dan pengujian jaringan berkecepatan tinggi via WhatsApp.</p>
+                        <p class="text-pink-200/70 text-xs mb-5">Tools perkakas digital dan pengujian jaringan berkecepatan tinggi via WhatsApp.</p>
 
                         <!-- Harga Paket Vilian Crash -->
                         <div class="space-y-2 mb-4">
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Hari*%20seharga%20*Rp%202.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Hari*%20seharga%20*Rp%202.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">1 Hari</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">3K</span> <span class="font-bold text-teal-400 text-xs">2K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">3K</span> <span class="font-bold text-pink-300 text-xs">2K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Minggu*%20seharga%20*Rp%205.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Minggu*%20seharga%20*Rp%205.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">1 Minggu</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">10K</span> <span class="font-bold text-teal-400 text-xs">5K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">10K</span> <span class="font-bold text-pink-300 text-xs">5K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Bulan*%20seharga%20*Rp%2015.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*1%20Bulan*%20seharga%20*Rp%2015.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">1 Bulan</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">20K</span> <span class="font-bold text-teal-400 text-xs">15K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">20K</span> <span class="font-bold text-pink-300 text-xs">15K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Full%20Up*%20seharga%20*Rp%2025.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Full%20Up*%20seharga%20*Rp%2025.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">Full Up</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">30K</span> <span class="font-bold text-teal-400 text-xs">25K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">30K</span> <span class="font-bold text-pink-300 text-xs">25K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Reseller*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Reseller*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">Reseller</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">50K</span> <span class="font-bold text-teal-400 text-xs">40K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">50K</span> <span class="font-bold text-pink-300 text-xs">40K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Partner*%20seharga%20*Rp%2050.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*VILIAN%20CRASH*%20paket%20*Partner*%20seharga%20*Rp%2050.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
                                 <div><span class="font-bold text-white text-xs block">Partner</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">60K</span> <span class="font-bold text-teal-400 text-xs">50K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">60K</span> <span class="font-bold text-pink-300 text-xs">50K</span></div>
                             </a>
                         </div>
 
                         <!-- Detail Fitur Unik Vilian Crash -->
                         <details class="group/detail mt-3">
-                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                            <summary class="cursor-pointer text-xs font-semibold text-pink-400 hover:text-pink-300 flex items-center gap-2 py-1 select-none">
                                 <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
                                 <span>Lihat Detail Fitur Vilian Crash</span>
                             </summary>
-                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                            <div class="mt-2 bg-[#0b0716] p-3 rounded-2xl border border-pink-500/20 text-[11px] text-pink-100/80 space-y-2">
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">PERKAKAS UTILITY & JARINGAN</p>
-                                    <p class="text-slate-400">Dilengkapi alat pengujian ketahanan server (DDoS), analisis jaringan internet, pelacak informasi publik, pengunduh media otomatis, perkakas digital harian, pengirim pesan beruntun otomatis, game mini hiburan, pengubah format data, serta akses pintasan menu cepat.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">PERKAKAS UTILITY & JARINGAN</p>
+                                    <p class="text-pink-200/70">Dilengkapi alat pengujian ketahanan server (DDoS), analisis jaringan internet, pelacak informasi publik, pengunduh media otomatis, perkakas digital harian, pengirim pesan beruntun otomatis, game mini hiburan, pengubah format data, serta akses pintasan menu cepat.</p>
                                 </div>
                             </div>
                         </details>
                     </div>
 
                     <div class="mt-6 flex gap-2">
-                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*VILIAN%20CRASH*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*VILIAN%20CRASH*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
                         </a>
-                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
                             <i class="fa-brands fa-telegram text-sm"></i> Order Tele
                         </a>
                     </div>
                 </div>
 
                 <!-- PRODUK 3: MANTAX X RAT -->
-                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                <div class="group bg-[#130e24]/80 backdrop-blur-xl rounded-3xl border border-pink-500/20 hover:border-pink-400/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/15">
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">3. MANTA'X X RAT</h3>
                             </div>
-                            <span class="bg-amber-500/10 text-amber-400 text-[10px] px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1 font-semibold">
+                            <span class="bg-amber-500/15 text-amber-300 text-[10px] px-3 py-1 rounded-full border border-amber-500/30 flex items-center gap-1 font-semibold">
                                 <i class="fa-brands fa-telegram text-[10px]"></i> Wajib Telegram
                             </span>
                         </div>
-                        <p class="text-slate-400 text-xs mb-5">Mesin otomasi pesan dan fitur RAT lengkap dengan integrasi bot Telegram.</p>
+                        <p class="text-pink-200/70 text-xs mb-5">Mesin otomasi pesan dan fitur RAT lengkap dengan integrasi bot Telegram.</p>
 
                         <!-- Harga Paket Mantax -->
                         <div class="space-y-2 mb-4">
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*1%20Hari*%20seharga%20*Rp%203.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center block">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*1%20Hari*%20seharga%20*Rp%203.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center block">
                                 <div><span class="font-bold text-white text-xs block">1 Hari</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">5k</span> <span class="font-bold text-teal-400 text-xs">3K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">5k</span> <span class="font-bold text-pink-300 text-xs">3K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Full%20Update*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center block">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Full%20Update*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center block">
                                 <div><span class="font-bold text-white text-xs block">Full Update</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">60K</span> <span class="font-bold text-teal-400 text-xs">40K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">60K</span> <span class="font-bold text-pink-300 text-xs">40K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Reseller*%20seharga%20*Rp%2070.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center block">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Reseller*%20seharga%20*Rp%2070.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center block">
                                 <div><span class="font-bold text-white text-xs block">Reseller</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">80K</span> <span class="font-bold text-teal-400 text-xs">70K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">80K</span> <span class="font-bold text-pink-300 text-xs">70K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Partner*%20seharga%20*Rp%2090.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center block">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*Partner*%20seharga%20*Rp%2090.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center block">
                                 <div><span class="font-bold text-white text-xs block">Partner</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">100K</span> <span class="font-bold text-teal-400 text-xs">90K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">100K</span> <span class="font-bold text-pink-300 text-xs">90K</span></div>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*TK%20/%20Staff*%20seharga%20*Rp%20130.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center block">
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*MANTAX%20UTILITY*%20paket%20*TK%20/%20Staff*%20seharga%20*Rp%20130.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center block">
                                 <div><span class="font-bold text-white text-xs block">TK / Staff</span></div>
-                                <div class="text-right"><span class="text-[10px] text-slate-500 line-through">150K</span> <span class="font-bold text-teal-400 text-xs">130K</span></div>
+                                <div class="text-right"><span class="text-[10px] text-pink-300/50 line-through">150K</span> <span class="font-bold text-pink-300 text-xs">130K</span></div>
                             </a>
                         </div>
 
                         <!-- Detail Fitur Unik Mantax X Rat -->
                         <details class="group/detail mt-3">
-                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                            <summary class="cursor-pointer text-xs font-semibold text-pink-400 hover:text-pink-300 flex items-center gap-2 py-1 select-none">
                                 <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
                                 <span>Lihat Detail Fitur Mantax X Rat</span>
                             </summary>
-                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                            <div class="mt-2 bg-[#0b0716] p-3 rounded-2xl border border-pink-500/20 text-[11px] text-pink-100/80 space-y-2">
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
-                                    <p class="text-slate-400">Pengiriman jeda aman khusus nomor kosong, penutupan paksa aplikasi iOS tersembunyi, jeda tak terlihat, jeda hapus antarmuka, gangguan tampilan, panggilan beruntun, fitur RAT (kendali jarak jauh), fitur sadap, gangguan kustom, serta pengiriman pendaftaran tautan masif.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
+                                    <p class="text-pink-200/70">Pengiriman jeda aman khusus nomor kosong, penutupan paksa aplikasi iOS tersembunyi, jeda tak terlihat, jeda hapus antarmuka, gangguan tampilan, panggilan beruntun, fitur RAT (kendali jarak jauh), fitur sadap, gangguan kustom, serta pengiriman pendaftaran tautan masif.</p>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">PERKAKAS PENDUKUNG (TOOLS)</p>
-                                    <p class="text-slate-400">Pencatatan keuangan digital, asisten kecerdasan buatan, analisis jaringan internet, pelacak informasi publik, akses hiburan multimedia, pengunduh file otomatis, pembuat generator data, pengecek status blokir WhatsApp mandiri, serta pemasangan bot otomatis.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">PERKAKAS PENDUKUNG (TOOLS)</p>
+                                    <p class="text-pink-200/70">Pencatatan keuangan digital, asisten kecerdasan buatan, analisis jaringan internet, pelacak informasi publik, akses hiburan multimedia, pengunduh file otomatis, pembuat generator data, pengecek status blokir WhatsApp mandiri, serta pemasangan bot otomatis.</p>
                                 </div>
                             </div>
                         </details>
                     </div>
 
                     <div class="mt-6 flex gap-2">
-                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*MANTAX%20UTILITY*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*MANTAX%20UTILITY*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
                         </a>
-                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
                             <i class="fa-brands fa-telegram text-sm"></i> Order Tele
                         </a>
                     </div>
                 </div>
 
                 <!-- PRODUK 4: SYAM X RAT -->
-                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-slate-800/80 hover:border-teal-500/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10">
+                <div class="group bg-[#130e24]/80 backdrop-blur-xl rounded-3xl border border-pink-500/20 hover:border-pink-400/60 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/15">
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">4. SYAM X RAT</h3>
                             </div>
-                            <span class="bg-slate-800/80 text-teal-300 text-[10px] px-2.5 py-1 rounded-full border border-teal-500/30 flex items-center gap-1">
+                            <span class="bg-pink-500/15 text-pink-300 text-[10px] px-3 py-1 rounded-full border border-pink-500/30 flex items-center gap-1 font-medium">
                                 <i class="fa-solid fa-bolt text-[9px]"></i> Tanpa Telegram
                             </span>
                         </div>
-                        <p class="text-slate-400 text-xs mb-5">Aplikasi lengkap berisi sistem bug, sadap, serta multi-RAT dalam satu genggaman via WhatsApp.</p>
+                        <p class="text-pink-200/70 text-xs mb-5">Aplikasi lengkap berisi sistem bug, sadap, serta multi-RAT dalam satu genggaman via WhatsApp.</p>
 
                         <!-- Harga Syam X Rat -->
                         <div class="space-y-2 mb-4">
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*1%20Day*%20seharga%20*Rp%203.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium text-xs">1 Hari</span><span class="font-bold text-teal-400 text-xs">3K</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*1%20Day*%20seharga%20*Rp%203.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium text-xs">1 Hari</span><span class="font-bold text-pink-300 text-xs">3K</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*7%20Day*%20seharga%20*Rp%2011.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium text-xs">7 Hari</span><span class="font-bold text-teal-400 text-xs">11K</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*7%20Day*%20seharga%20*Rp%2011.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium text-xs">7 Hari</span><span class="font-bold text-pink-300 text-xs">11K</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*30%20Day*%20seharga%20*Rp%2020.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium text-xs">30 Hari</span><span class="font-bold text-teal-400 text-xs">20K</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*30%20Day*%20seharga%20*Rp%2020.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium text-xs">30 Hari</span><span class="font-bold text-pink-300 text-xs">20K</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*Full%20Up*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium text-xs">Full Update</span><span class="font-bold text-teal-400 text-xs">40K</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*Full%20Up*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium text-xs">Full Update</span><span class="font-bold text-pink-300 text-xs">40K</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*Reseller*%20seharga%20*Rp%2080.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium text-xs">Reseller</span><span class="font-bold text-teal-400 text-xs">80k</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*SYAM%20X%20RAT*%20paket%20*Reseller*%20seharga%20*Rp%2080.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium text-xs">Reseller</span><span class="font-bold text-pink-300 text-xs">80k</span>
                             </a>
                         </div>
 
                         <!-- Detail Fitur Unik Syam X Rat -->
                         <details class="group/detail mt-3">
-                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                            <summary class="cursor-pointer text-xs font-semibold text-pink-400 hover:text-pink-300 flex items-center gap-2 py-1 select-none">
                                 <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
                                 <span>Lihat Detail Fitur Syam X Rat</span>
                             </summary>
-                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                            <div class="mt-2 bg-[#0b0716] p-3 rounded-2xl border border-pink-500/20 text-[11px] text-pink-100/80 space-y-2">
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">MENU GANGGUAN SISTEM (BUG)</p>
-                                    <p class="text-slate-400">Pengiriman jeda respon, jeda visibilitas, penutupan paksa aplikasi WhatsApp Android resmi atau bisnis, penutupan paksa iOS tersembunyi, kerusakan antarmuka (UI), panggilan telepon beruntun otomatis, penutupan saat tombol diklik, serta pelumpuhan obrolan grup.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">MENU GANGGUAN SISTEM (BUG)</p>
+                                    <p class="text-pink-200/70">Pengiriman jeda respon, jeda visibilitas, penutupan paksa aplikasi WhatsApp Android resmi atau bisnis, penutupan paksa iOS tersembunyi, kerusakan antarmuka (UI), panggilan telepon beruntun otomatis, penutupan saat tombol diklik, serta pelumpuhan obrolan grup.</p>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">PERKAKAS PENDUKUNG (TOOLS)</p>
-                                    <p class="text-slate-400">Pencatatan keuangan pribadi, asisten kecerdasan buatan, analisis jaringan, pencari data publik, akses hiburan multimedia, pengunduh file, generator teks, pengecek status blokir WhatsApp mandiri, pemasangan bot otomatis, pengatur peladen virtual (VPS), serta pengelolaan tiga sistem pengendali jarak jauh (RAT) dalam satu aplikasi.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">PERKAKAS PENDUKUNG (TOOLS)</p>
+                                    <p class="text-pink-200/70">Pencatatan keuangan pribadi, asisten kecerdasan buatan, analisis jaringan, pencari data publik, akses hiburan multimedia, pengunduh file, generator teks, pengecek status blokir WhatsApp mandiri, pemasangan bot otomatis, pengatur peladen virtual (VPS), serta pengelolaan tiga sistem pengendali jarak jauh (RAT) dalam satu aplikasi.</p>
                                 </div>
                             </div>
                         </details>
                     </div>
 
                     <div class="mt-6 flex gap-2">
-                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*SYAM%20X%20RAT*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*SYAM%20X%20RAT*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
                         </a>
-                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
                             <i class="fa-brands fa-telegram text-sm"></i> Order Tele
                         </a>
                     </div>
                 </div>
 
                 <!-- PRODUK 5: X - FAR X RAT -->
-                <div class="group bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-teal-500/50 hover:border-teal-400 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/20 relative overflow-hidden md:col-span-2">
-                    <div class="absolute -right-12 -top-12 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="group bg-[#130e24]/80 backdrop-blur-xl rounded-3xl border border-pink-500/30 hover:border-pink-400/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 relative overflow-hidden md:col-span-2">
+                    <div class="absolute -right-12 -top-12 w-32 h-32 bg-pink-500/15 rounded-full blur-2xl pointer-events-none"></div>
                     <div>
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="text-[10px] font-bold text-teal-300 uppercase tracking-widest bg-teal-500/20 px-2 py-0.5 rounded border border-teal-500/40">RILIS TERBARU</span>
-                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1 flex items-center gap-2">
+                                <span class="text-[10px] font-bold text-pink-300 uppercase tracking-widest bg-pink-500/20 px-3 py-1 rounded-full border border-pink-500/40">🐾 RILIS TERBARU 🐾</span>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-2 flex items-center gap-2">
                                     5. X - FAR X RAT
                                 </h3>
                             </div>
-                            <span class="bg-slate-800/80 text-teal-300 text-[10px] px-2.5 py-1 rounded-full border border-teal-500/30 flex items-center gap-1">
+                            <span class="bg-pink-500/15 text-pink-300 text-[10px] px-3 py-1 rounded-full border border-pink-500/30 flex items-center gap-1 font-medium">
                                 <i class="fa-solid fa-bolt text-[9px]"></i> Tanpa Telegram
                             </span>
                         </div>
-                        <p class="text-slate-400 text-xs mb-5">Aplikasi pengendali jarak jauh (RAT) dan fitur gangguan sistem tingkat lanjut tanpa memerlukan Telegram.</p>
+                        <p class="text-pink-200/70 text-xs mb-5">Aplikasi pengendali jarak jauh (RAT) dan fitur gangguan sistem tingkat lanjut tanpa memerlukan Telegram.</p>
 
                         <!-- List Harga X - FAR X RAT -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs mb-4">
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*1%20Hari*%20seharga%20*Rp%202.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">1 HARI</span>
-                                <span class="font-bold text-teal-400">Rp 2.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*1%20Hari*%20seharga%20*Rp%202.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">1 HARI</span>
+                                <span class="font-bold text-pink-300">Rp 2.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*5%20Hari*%20seharga%20*Rp%207.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">5 HARI</span>
-                                <span class="font-bold text-teal-400">Rp 7.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*5%20Hari*%20seharga%20*Rp%207.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">5 HARI</span>
+                                <span class="font-bold text-pink-300">Rp 7.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Full%20Up*%20seharga%20*Rp%2020.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">FULL UPDATE</span>
-                                <span class="font-bold text-teal-400">20.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Full%20Up*%20seharga%20*Rp%2020.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">FULL UPDATE</span>
+                                <span class="font-bold text-pink-300">20.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*VIP*%20seharga%20*Rp%2030.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">VIP</span>
-                                <span class="font-bold text-teal-400">30.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*VIP*%20seharga%20*Rp%2030.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">VIP</span>
+                                <span class="font-bold text-pink-300">30.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Reseller*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">RESELLER</span>
-                                <span class="font-bold text-teal-400">40.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Reseller*%20seharga%20*Rp%2040.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">RESELLER</span>
+                                <span class="font-bold text-pink-300">40.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Admin*%20seharga%20*Rp%2050.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center">
-                                <span class="text-slate-300 font-medium">ADMIN</span>
-                                <span class="font-bold text-teal-400">50.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Admin*%20seharga%20*Rp%2050.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center">
+                                <span class="text-pink-200/80 font-medium">ADMIN</span>
+                                <span class="font-bold text-pink-300">50.000</span>
                             </a>
-                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Partner*%20seharga%20*Rp%2070.000*" target="_blank" class="bg-slate-950/80 hover:bg-teal-500/10 hover:border-teal-500/60 transition p-2.5 rounded-lg border border-slate-800/80 flex justify-between items-center sm:col-span-2 lg:col-span-1">
-                                <span class="text-slate-300 font-medium">PARTNER</span>
-                                <span class="font-bold text-teal-400">70.000</span>
+                            <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20order%20*X-FAR%20X%20RAT*%20paket%20*Partner*%20seharga%20*Rp%2070.000*" target="_blank" class="bg-[#0b0716] hover:bg-pink-500/10 hover:border-pink-400/50 transition p-2.5 rounded-xl border border-pink-500/20 flex justify-between items-center sm:col-span-2 lg:col-span-1">
+                                <span class="text-pink-200/80 font-medium">PARTNER</span>
+                                <span class="font-bold text-pink-300">70.000</span>
                             </a>
                         </div>
 
                         <!-- Detail Fitur Unik X - FAR X RAT -->
                         <details class="group/detail mt-3">
-                            <summary class="cursor-pointer text-xs font-semibold text-teal-400 hover:text-teal-300 flex items-center gap-2 py-1 select-none">
+                            <summary class="cursor-pointer text-xs font-semibold text-pink-400 hover:text-pink-300 flex items-center gap-2 py-1 select-none">
                                 <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-open/detail:rotate-90"></i>
                                 <span>Lihat Detail Fitur X - FAR X RAT</span>
                             </summary>
-                            <div class="mt-2 bg-slate-950/90 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-300 space-y-2">
+                            <div class="mt-2 bg-[#0b0716] p-3 rounded-2xl border border-pink-500/20 text-[11px] text-pink-100/80 space-y-2">
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
-                                    <p class="text-slate-400">Pengiriman jeda waktu tersembunyi, jeda bebas spam, penutupan aplikasi target secara tersembunyi, penghenti sistem perangkat iOS, pembuat layar Android kosong total, pemblokiran akses grup WhatsApp, serta gangguan khusus ruang obrolan grup.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">FITUR GANGGUAN SISTEM (BUG)</p>
+                                    <p class="text-pink-200/70">Pengiriman jeda waktu tersembunyi, jeda bebas spam, penutupan aplikasi target secara tersembunyi, penghenti sistem perangkat iOS, pembuat layar Android kosong total, pemblokiran akses grup WhatsApp, serta gangguan khusus ruang obrolan grup.</p>
                                 </div>
                                 <div>
-                                    <p class="font-bold text-teal-400 mb-0.5">FITUR PENGENDALI JARAK JAUH (RAT & SADAP)</p>
-                                    <p class="text-slate-400">Kontrol lampu senter perangkat, akses kamera target, penguncian perangkat jarak jauh, pelacakan lokasi, pemantauan aktivitas langsung, pengambilan cuplikan layar, penggantian latar belakang (wallpaper), pembacaan daftar kontak, pesan Gmail, SMS, dan galeri foto, pemutusan koneksi WiFi, hingga pemadaman daya perangkat target dari jarak jauh.</p>
+                                    <p class="font-bold text-pink-400 mb-0.5">FITUR PENGENDALI JARAK JAUH (RAT & SADAP)</p>
+                                    <p class="text-pink-200/70">Kontrol lampu senter perangkat, akses kamera target, penguncian perangkat jarak jauh, pelacakan lokasi, pemantauan aktivitas langsung, pengambilan cuplikan layar, penggantian latar belakang (wallpaper), pembacaan daftar kontak, pesan Gmail, SMS, dan galeri foto, pemutusan koneksi WiFi, hingga pemadaman daya perangkat target dari jarak jauh.</p>
                                 </div>
                             </div>
                         </details>
                     </div>
 
                     <div class="mt-6 flex gap-2">
-                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*X-FAR%20X%20RAT*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                        <a href="https://wa.me/6285770059860?text=Halo%20Admin,%20saya%20mau%20tanya%20mengenai%20produk%20*X-FAR%20X%20RAT*" target="_blank" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
                             <i class="fa-brands fa-whatsapp text-sm"></i> Order WA
                         </a>
-                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
+                        <a href="https://t.me/jengkoler" target="_blank" class="flex-1 py-2.5 bg-sky-600 hover:bg-sky-500 text-white text-center font-bold text-xs rounded-2xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-sky-600/20">
                             <i class="fa-brands fa-telegram text-sm"></i> Order Tele
                         </a>
                     </div>
@@ -509,72 +510,72 @@
         <!-- SECTION GALERI VIDEO TUTORIAL & DEMO -->
         <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
             <div class="text-center mb-10">
-                <span class="text-teal-400 text-xs font-bold uppercase tracking-widest">Pusat Video & Demo</span>
+                <span class="text-pink-400 text-xs font-bold uppercase tracking-widest">🐾 Pusat Video & Demo 🐾</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Video Panduan Pemakaian & Hasil Bug</h2>
-                <p class="text-slate-400 text-xs sm:text-sm mt-1">Tonton cara pemakaian dan bukti performa aplikasi sebelum Anda melakukan order.</p>
+                <p class="text-pink-200/70 text-xs sm:text-sm mt-1">Tonton cara pemakaian dan bukti performa aplikasi sebelum Anda melakukan order.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Pemakaian X-FAR</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Pemakaian X-FAR</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial Pemakaian X-FAR.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Hasil Holow</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Hasil Holow</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Hasil Holow.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Add Sender dan Bug</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Add Sender dan Bug</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial add sender dan bug.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Add Sender Mantax</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Add Sender Mantax</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial Add sender Mantax dan Bug.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Test Bug Vilian</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
-                        <source src="Tutorial Test Bug Vilian.MP4" type="video/mp4">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Test Bug Vilain</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
+                        <source src="Tutorial Test Bug Vilain.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Tautkan Perangkat</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Tautkan Perangkat</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial Tautkan Perangkat.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Syam Video Bug</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Syam Video Bug</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial Syam Video Bug.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Sadap Feature</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Sadap Feature</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutroial Sadap.MP4" type="video/mp4">
                     </video>
                 </div>
 
-                <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4">
-                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-teal-400"></i> Tutorial Add Sender APK Syam</p>
-                    <video controls class="w-full h-48 object-cover rounded-xl bg-black border border-slate-800">
+                <div class="bg-[#130e24]/80 rounded-3xl border border-pink-500/20 p-4">
+                    <p class="font-bold text-white text-xs mb-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-play text-pink-400"></i> Tutorial Add Sender APK Syam</p>
+                    <video controls class="w-full h-48 object-cover rounded-2xl bg-black border border-pink-500/20">
                         <source src="Tutorial add sender dan kirim bug di APK SYAM.MP4" type="video/mp4">
                     </video>
                 </div>
@@ -584,14 +585,14 @@
 
         <!-- SECTION BANNER SALURAN & TESTIMONI -->
         <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-            <div class="bg-gradient-to-r from-slate-900 via-teal-950/40 to-slate-900 rounded-2xl border border-teal-500/30 p-6 sm:p-8 text-center">
+            <div class="bg-gradient-to-r from-[#130e24] via-pink-950/40 to-[#130e24] rounded-3xl border border-pink-500/30 p-6 sm:p-8 text-center shadow-2xl">
                 <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Ingin Melihat Lebih Banyak Testimoni & Informasi Resmi?</h2>
-                <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mb-6">Gabung ke saluran WhatsApp resmi kami untuk mendapatkan update harga terbaru, rilis aplikasi baru, dan bukti transaksi dari seluruh pembeli.</p>
+                <p class="text-pink-200/70 text-xs sm:text-sm max-w-2xl mx-auto mb-6">Gabung ke saluran WhatsApp resmi kami untuk mendapatkan update harga terbaru, rilis aplikasi baru, dan bukti transaksi dari seluruh pembeli.</p>
                 <div class="flex flex-wrap justify-center gap-3">
-                    <a href="https://whatsapp.com/channel/0029Vb8GPz5GehEIelnEsg3b" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-2">
+                    <a href="https://whatsapp.com/channel/0029Vb8GPz5GehEIelnEsg3b" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg shadow-amber-500/20">
                         <i class="fa-solid fa-star"></i> Saluran Testimoni WhatsApp
                     </a>
-                    <a href="https://whatsapp.com/channel/0029VbCRTkuJ93wXdEgvm71g" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-2">
+                    <a href="https://whatsapp.com/channel/0029VbCRTkuJ93wXdEgvm71g" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg shadow-emerald-500/20">
                         <i class="fa-brands fa-whatsapp"></i> Saluran Resmi HAYTOR
                     </a>
                 </div>
@@ -599,14 +600,14 @@
         </section>
 
         <!-- Footer -->
-        <footer id="about" class="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md py-10 sm:py-14 mt-12">
+        <footer id="about" class="border-t border-pink-500/20 bg-[#0b0716]/90 backdrop-blur-md py-10 sm:py-14 mt-12">
             <div class="max-w-4xl mx-auto px-4 text-center">
-                <p class="font-extrabold text-white text-sm sm:text-base tracking-wider mb-2">HAYTOR STORE</p>
-                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto mb-6">
+                <p class="font-extrabold text-white text-sm sm:text-base tracking-wider mb-2">🐾 HAYTOR STORE - KAWAII TECH 🐾</p>
+                <p class="text-pink-200/60 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto mb-6">
                     Aplikasi ini dirancang sebagai platform utility & otomasi terintegrasi untuk mendukung efisiensi pengiriman pesan, pemantauan jaringan, serta penyediaan tools pendukung digital dalam satu sistem yang tangguh.
                 </p>
 
-                <div class="flex justify-center items-center gap-2 text-[10px] sm:text-xs text-teal-400/80 font-medium mb-4">
+                <div class="flex justify-center items-center gap-2 text-[10px] sm:text-xs text-pink-300/80 font-medium mb-4 flex-wrap">
                     <span>⚡ Kinerja Cepat & Handal</span>
                     <span>•</span>
                     <span>🔒 Keamanan Akses Terjaga</span>
@@ -614,72 +615,125 @@
                     <span>🌐 Integrasi Sistem Global</span>
                 </div>
 
-                <p class="text-slate-600 text-[11px]">© 2026 Haytor Store. All rights reserved.</p>
+                <p class="text-pink-400/50 text-[11px]">© 2026 Haytor Store. All rights reserved. Made with 🐾 & Kawaii Tech.</p>
             </div>
         </footer>
     </div>
 
-    <!-- Background Particle Script -->
+    <!-- Background Kawaii Tech Vector & Cat Animation Script -->
     <script>
         const canvas = document.getElementById('bgCanvas');
         const ctx = canvas.getContext('2d');
 
-        let particles = [];
-        let mouse = { x: null, y: null, radius: 120 };
+        let elements = [];
+        let mouse = { x: null, y: null, radius: 140 };
 
         function initCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            particles = [];
-            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 15000);
+            elements = [];
+            const count = Math.floor((canvas.width * canvas.height) / 22000);
             
-            for (let i = 0; i < numberOfParticles; i++) {
-                particles.push({
+            for (let i = 0; i < count; i++) {
+                elements.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.6,
-                    vy: (Math.random() - 0.5) * 0.6,
-                    radius: Math.random() * 1.8 + 0.5,
-                    color: Math.random() > 0.5 ? '#2dd4bf' : '#38bdf8'
+                    vx: (Math.random() - 0.5) * 0.8,
+                    vy: (Math.random() - 0.5) * 0.8,
+                    size: Math.random() * 14 + 8,
+                    type: Math.random() > 0.5 ? 'paw' : (Math.random() > 0.5 ? 'fish' : 'tech'),
+                    color: Math.random() > 0.5 ? 'rgba(236, 72, 153, 0.45)' : 'rgba(168, 85, 247, 0.45)',
+                    angle: Math.random() * Math.PI,
+                    vAngle: (Math.random() - 0.5) * 0.02
                 });
             }
         }
 
         window.addEventListener('resize', initCanvas);
         window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
         });
+
+        // Gambar bentuk Kawaii Vector (Cakar Kucing & Jejak Tech)
+        function drawShape(ctx, el) {
+            ctx.save();
+            ctx.translate(el.x, el.y);
+            ctx.rotate(el.angle);
+            ctx.fillStyle = el.color;
+
+            if (el.type === 'paw') {
+                // Jejak Cakar Kucing Kawaii
+                ctx.beginPath();
+                ctx.arc(0, 0, el.size * 0.4, 0, Math.PI * 2); // telapak
+                ctx.arc(-el.size * 0.4, -el.size * 0.4, el.size * 0.2, 0, Math.PI * 2); // jari 1
+                ctx.arc(0, -el.size * 0.55, el.size * 0.2, 0, Math.PI * 2); // jari 2
+                ctx.arc(el.size * 0.4, -el.size * 0.4, el.size * 0.2, 0, Math.PI * 2); // jari 3
+                ctx.fill();
+            } else if (el.type === 'fish') {
+                // Ikan Kecil Lucu
+                ctx.beginPath();
+                ctx.ellipse(0, 0, el.size * 0.6, el.size * 0.3, 0, 0, Math.PI * 2);
+                ctx.moveTo(el.size * 0.5, 0);
+                ctx.lineTo(el.size * 0.9, -el.size * 0.3);
+                ctx.lineTo(el.size * 0.9, el.size * 0.3);
+                ctx.closePath();
+                ctx.fill();
+            } else {
+                // Titik Node Teknologi / Sparkle Bintang Kawaii ✨
+                ctx.beginPath();
+                ctx.arc(0, 0, el.size * 0.35, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = el.color;
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(-el.size * 0.7, 0); ctx.lineTo(el.size * 0.7, 0);
+                ctx.moveTo(0, -el.size * 0.7); ctx.lineTo(0, el.size * 0.7);
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
 
         function animate() {
             requestAnimationFrame(animate);
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            for (let i = 0; i < particles.length; i++) {
-                let p = particles[i];
-                p.x += p.vx;
-                p.y += p.vy;
+            for (let i = 0; i < elements.length; i++) {
+                let el = elements[i];
+                el.x += el.vx;
+                el.y += el.vy;
+                el.angle += el.vAngle;
 
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                if (el.x < 0 || el.x > canvas.width) el.vx *= -1;
+                if (el.y < 0 || el.y > canvas.height) el.vy *= -1;
 
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.fill();
+                // Interaksi lembut dengan kursor mouse
+                if (mouse.x !== null && mouse.y !== null) {
+                    let dx = mouse.x - el.x;
+                    let dy = mouse.y - el.y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < mouse.radius) {
+                        let angle = Math.atan2(dy, dx);
+                        el.x -= Math.cos(angle) * 1.2;
+                        el.y -= Math.sin(angle) * 1.2;
+                    }
+                }
 
-                for (let j = i + 1; j < particles.length; j++) {
-                    let p2 = particles[j];
-                    let dx = p.x - p2.x;
-                    let dy = p.y - p2.y;
+                drawShape(ctx, el);
+
+                // Hubungkan garis sirkuit tipis antar node tech
+                for (let j = i + 1; j < elements.length; j++) {
+                    let el2 = elements[j];
+                    let dx = el.x - el2.x;
+                    let dy = el.y - el2.y;
                     let dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 100) {
+                    if (dist < 110) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(45, 212, 191, ${1 - dist / 100})`;
-                        ctx.lineWidth = 0.3;
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(236, 72, 153, ${0.25 * (1 - dist / 110)})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.moveTo(el.x, el.y);
+                        ctx.lineTo(el2.x, el2.y);
                         ctx.stroke();
                     }
                 }
