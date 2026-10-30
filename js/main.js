@@ -24,7 +24,7 @@ var I18N_EN = {
   services_sub: "Complete digital automation and testing solutions in one hand.",
   packages_badge: "PRODUCT CATALOG", 
   packages_title: "Applications & License Packages",
-  packages_sub: "Click directly on any pricing package below to place an instant WhatsApp order.",
+  packages_sub: "Click directly on any pricing package below to place an instant order.",
   video_badge: "VIDEO & DEMO HUB",
   video_title: "Tutorial & Performance Videos",
   video_sub: "Watch usage guides and app performance proofs (manual play/pause).",
@@ -60,3 +60,52 @@ function setLang(lang){
   try{ saved = localStorage.getItem('haytor-lang') || 'id'; }catch(e){}
   if(saved === 'en') setLang('en');
 })();
+
+// Modal Popup Handler for WhatsApp / Telegram Order Selection
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('orderModal');
+  const closeModal = document.getElementById('closeModal');
+  const modalProductInfo = document.getElementById('modalProductInfo');
+  const modalWaBtn = document.getElementById('modalWaBtn');
+  const modalTgBtn = document.getElementById('modalTgBtn');
+
+  const triggers = document.querySelectorAll('.order-trigger');
+
+  triggers.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const product = this.getAttribute('data-product');
+      const pkg = this.getAttribute('data-package');
+      const price = this.getAttribute('data-price');
+
+      let message = "";
+      if(price === "Info") {
+        message = `Halo Admin, saya mau tanya mengenai produk *${product}*`;
+      } else {
+        message = `Halo Admin, saya mau order *${product}* paket *${pkg}* seharga *${price}*`;
+      }
+
+      modalProductInfo.textContent = `${product} — ${pkg} (${price})`;
+
+      const waUrl = `https://wa.me/6285770059860?text=${encodeURIComponent(message)}`;
+      const tgUrl = `https://t.me/cacihama?text=${encodeURIComponent(message)}`;
+
+      modalWaBtn.href = waUrl;
+      modalTgBtn.href = tgUrl;
+
+      modal.style.display = 'flex';
+    });
+  });
+
+  if(closeModal) {
+    closeModal.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  }
+
+  window.addEventListener('click', function(e) {
+    if(e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
