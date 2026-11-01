@@ -243,6 +243,8 @@ var I18N_EN = {
   dapur_feat1_desc: "Fast transaction recording, kitchen menu & recipe management, raw material stock management, Bluetooth Thermal Printer Support.",
   dapur_lbl_feat2: "REPORTS & FINANCE:",
   dapur_feat2_desc: "Automatic profit and loss reports, daily/monthly sales recap, Excel/PDF export, and multi-cashier/employee features.",
+  dapur_lbl_feat3: "NOTE:",
+  dapur_feat3_desc: "Max login 3 Devices. Unregistered accounts will not be able to log in.",
   btn_order_admin_dapur: "Order Dapur Kita via Admin",
   dapur_gallery_title: "📱 System Documentation & Preview",
   dapur_gallery_sub: "Scroll down on the gallery box to view app screenshots. Click the photo to enlarge.",
