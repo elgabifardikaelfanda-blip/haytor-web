@@ -347,3 +347,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Script untuk membersihkan hash/anchor (#) dari URL setelah di-klik
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('nav a[href^="#"], .cta-row a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        if (window.history.pushState) {
+          window.history.pushState("", "", window.location.pathname);
+        }
+      }
+    });
+  });
+});
