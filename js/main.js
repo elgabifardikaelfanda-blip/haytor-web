@@ -234,7 +234,7 @@ var I18N_EN = {
   catalog_help_btn: "▶ Watch Video Tutorial Now",
 
 // --- Dapur Kita Page (Bilingual additions) ---
-  dapur_meta_title: "Dapur Kita — UMKM Cashier | HAYTOR STORE",
+  dapur_tag_app: "⚡ POS Cashier App & Bookkeeping",
   dapur_desc: "Versatile UMKM Cashier application for stalls, cafes, and kitchen culinary businesses. Officially released with complete features.",
   dapur_status_title: "Project Status",
   dapur_status_val: "New Release",
