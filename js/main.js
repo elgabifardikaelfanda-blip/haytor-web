@@ -233,23 +233,22 @@ var I18N_EN = {
   catalog_help_desc: "Watch complete guides and app usage demonstrations through our video tutorial page!",
   catalog_help_btn: "▶ Watch Video Tutorial Now",
 
-  // --- Dapur Kita Page ---
+// --- Dapur Kita Page (Bilingual additions) ---
   dapur_meta_title: "Dapur Kita — UMKM Cashier | HAYTOR STORE",
-  dapur_badge: "DAPUR KITA",
-  dapur_title: "UMKM Cashier Solution & Kitchen Management",
-  dapur_sub: "Practical digital cash register system (POS) to record sales, manage kitchen ingredient stock, print receipts, and UMKM financial reports.",
-  dapur_tag_coming: "🚧 COMING SOON",
-  dapur_card_title: "🍳 DAPUR KITA — UMKM CASHIER",
-  dapur_tag_app: "📱 POS Cashier App & Bookkeeping",
-  dapur_desc: "Versatile UMKM Cashier application for stalls, cafes, and kitchen culinary businesses. Currently, the application is in the system build development stage.",
+  dapur_desc: "Versatile UMKM Cashier application for stalls, cafes, and kitchen culinary businesses. Officially released with complete features.",
   dapur_status_title: "Project Status",
-  dapur_status_val: "On Progress (Build)",
-  dapur_sum: "🔍 View UMKM Cashier Feature Leak",
+  dapur_status_val: "New Release",
+  dapur_sum: "🔍 View UMKM Cashier Feature Details",
   dapur_lbl_feat1: "CASHIER & STOCK FEATURES:",
   dapur_feat1_desc: "Fast transaction recording, kitchen menu & recipe management, raw material stock management, Bluetooth Thermal Printer Support.",
   dapur_lbl_feat2: "REPORTS & FINANCE:",
   dapur_feat2_desc: "Automatic profit and loss reports, daily/monthly sales recap, Excel/PDF export, and multi-cashier/employee features.",
-  dapur_warning: "⏳ Please Be Patient, Application Is Still In Build Phase",
+  btn_order_admin_dapur: "Order Dapur Kita via Admin",
+  dapur_gallery_title: "📱 System Documentation & Preview",
+  dapur_gallery_sub: "Scroll down on the gallery box to view app screenshots. Click the photo to enlarge.",
+  dapur_gallery_box: "📸 Interface Gallery (Scroll Down)",
+  dapur_video_title: "🎬 Dapur Kita System Demo Video",
+  dapur_video_sub: "Direct preview of cashier application usage.",
 
   // --- Video Tutorial Page ---
   video_badge: "VIDEO & DEMO CENTER",
