@@ -238,7 +238,7 @@ var I18N_EN = {
   dapur_desc: "Versatile UMKM Cashier application for stalls, cafes, and kitchen culinary businesses. Officially released with complete features.",
   dapur_status_title: "Project Status",
   dapur_status_val: "New Release",
-  dapur_sum: "🔍 View UMKM Cashier Feature Details",
+  dapur_sum: "🔍 View Feature Details",
   dapur_lbl_feat1: "CASHIER & STOCK FEATURES:",
   dapur_feat1_desc: "Fast transaction recording, kitchen menu & recipe management, raw material stock management, Bluetooth Thermal Printer Support.",
   dapur_lbl_feat2: "REPORTS & FINANCE:",
