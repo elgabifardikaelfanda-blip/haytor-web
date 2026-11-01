@@ -348,23 +348,41 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Script untuk membersihkan hash/anchor (#) dari URL setelah di-klik
+// Script Pembersih URL Universal (Bebas Bug Hash & Index.html)
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('nav a[href^="#"], .cta-row a[href^="#"]').forEach(anchor => {
+  // Tangkap semua klik ke link internal berpola # / /#
+  document.querySelectorAll('nav a, .cta-row a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
+      const href = this.getAttribute('href');
+      if (!href) return;
       
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
+      const hashIndex = href.indexOf('#');
+      
+      // Jika link mengandung tanda hashtag # (layanan, order, kontak, dll)
+      if (hashIndex !== -1) {
+        const targetId = href.substring(hashIndex);
+        const targetElement = document.querySelector(targetId);
         
-        if (window.history.pushState) {
-          window.history.pushState("", "", window.location.pathname);
+        // Jika elemen target ada di halaman saat ini
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          
+          // Bersihkan URL address bar secara mulus tanpa mengotori URL
+          if (window.history.pushState) {
+            window.history.pushState("", "", "/");
+          }
         }
       }
     });
   });
+
+  // Jika halaman pertama dibuka dengan bawaan hashtag (misal dari bookmark)
+  if (window.location.hash) {
+    setTimeout(function() {
+      if (window.history.pushState) {
+        window.history.pushState("", "", "/");
+      }
+    }, 100);
+  }
 });
