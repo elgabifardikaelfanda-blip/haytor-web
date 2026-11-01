@@ -249,7 +249,7 @@ var I18N_EN = {
   dapur_gallery_title: "📱 System Documentation & Preview",
   dapur_gallery_sub: "Scroll down on the gallery box to view app screenshots. Click the photo to enlarge.",
   dapur_gallery_box: "📸 Interface Gallery (Scroll Down)",
-  dapur_video_title: "🎬 Dapur Kita System Demo Video",
+  dapur_video_title: "🎬 System Demo Video",
   dapur_video_sub: "Direct preview of cashier application usage.",
 
   // --- Video Tutorial Page ---
