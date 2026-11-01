@@ -202,11 +202,24 @@ var I18N_EN = {
   p9_bug_desc: "Crash Msg Andro, Delay Invisible, Prank Spam Porn, Prank Spam Alert, Banned WhatsApp Group.",
   p9_other_desc: "Spam Pair, AM Prem, Spam NGL, Web To Apk, QR Generator, Check Banned WA, Enc JavaScript, Media Downloader, Search Script Mobile Legends, Netflix Streaming Token.",
 
-  lbl_bug_menu: "FEATURE MENU BUG:",
   p10_bug_desc: "Forclose Invisible Work All, Forclose One Msg Hard, Forclose Video All Android, Forclose Image Work All WA, Crash Invisible No Click, Crash Visible Auto C1, Freeze Chat Brutal, Blank Android No Click, Forclose New V2, Delay Hard, Crash UI System.",
+  p11_bug_desc: "Create AM Mod, Spam OTP, Global Chat, Cool Design + Unique, All Bug Work, RAT (Wiretap), Anti Ampos.",
 
   lbl_viper_features: "V1PER BUGS FEATURES:",
-  p11_bug_desc: "Create AM Mod, Spam OTP, Global Chat, Cool Design + Unique, All Bug Work, RAT (Wiretap), Anti Ampos.",
+
+  // --- Viper Apps & Lennox Spy (Produk 12 & 13) ---
+  viper_tag: "⚡ Fast Bug & License",
+  viper_desc: "Complete duration Viper application for various system needs.",
+  btn_order_admin_viper: "Order Viper Apps via Admin",
+  
+  lennox_tag: "⚡ Without Using Telegram Also Works",
+  lennox_desc: "Advanced system testing application complete with RAT and DDoS panel features.",
+  sum_lennox: "🔍 View Lennox Spy Feature Details",
+  lbl_lennox_bug: "LENNOX BUG MENU:",
+  lennox_bug_desc: "Crash IOS, Crash UI, Blank Click, Spam Porn, Prank Spam Alert, Crash Frame Android, Delay & Freeze Invis, Spam Alert Group, Banned Group New, Blank Click Group, Spam Porn Group.",
+  lbl_lennox_feat: "OTHER LENNOX FEATURES:",
+  lennox_feat_desc: "RAT / Wiretap, Sender Glob, Lennox AI, Spam NGL, Wifi Killer, NIK Detail, Add Client, Global Chat, Domain OSINT, Check WA Band, Spam OTP WA, Spam Report WA, Media Download, Read Comics, DDoS Attack Panel.",
+  btn_order_admin_lennox: "Order Lennox Spy via Admin",
 
   // --- Tombol Order Admin Katalog ---
   btn_order_admin_p7: "Order Oxva Bug X Rat via Admin",
@@ -243,11 +256,8 @@ var I18N_EN = {
   video_title: "Usage Guide Videos & Bug Results",
   video_sub: "Watch usage methods and application performance proofs. If opening via Chrome from a Personal Computer (PC) click PLAY then click three dots lanjut picture in picture.",
 
-  // --- Footer Links ---
   footer_privacy: "Privacy Policy",
   footer_terms: "Terms of Service",
-
-  // --- Modal & Lainnya ---
   modal_title: "Select Ordering Channel",
   modal_sub: "Please choose a platform to continue ordering with an automated message format:"
 };
