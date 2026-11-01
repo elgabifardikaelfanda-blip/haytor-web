@@ -164,6 +164,97 @@
     justify-content: center;
   }
 
+  /* SECTION LANGKAH PEMESANAN KHAS DAPURKITA (gaya beranda utama) */
+  .dk-order {
+    margin-top: 44px;
+    text-align: center;
+    color: #f2eefc;
+  }
+  .dk-order-badge {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #cfc9e8;
+    text-transform: uppercase;
+  }
+  .dk-order > h3 {
+    margin: 8px 0 6px;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  .dk-order-sub { font-size: 0.9rem; opacity: 0.85; margin: 0 0 14px; }
+  .dk-sparkles { font-size: 1.15rem; letter-spacing: 10px; margin-bottom: 20px; }
+  .dk-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 26px;
+  }
+  .dk-step {
+    background: #fff;
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    padding: 18px 16px;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .dk-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 3px solid var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.25rem; color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .dk-step-title { font-weight: 900; font-size: 1rem; margin-bottom: 6px; }
+  .dk-step p { margin: 0; font-size: 0.83rem; line-height: 1.55; }
+  .dk-price { font-size: 1.05rem; font-weight: 800; margin-bottom: 20px; }
+  .dk-price-val {
+    background: var(--pink); color: #fff;
+    padding: 4px 12px; border-radius: 8px;
+    border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+    white-space: nowrap;
+  }
+  .dk-qris {
+    background: #fff;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 14px;
+    max-width: 280px;
+    margin: 0 auto 22px;
+  }
+  .dk-qris img { width: 100%; max-width: 230px; display: block; margin: 0 auto; }
+  .dk-qris-cap { color: var(--ink); font-size: 0.78rem; font-weight: 700; margin-top: 8px; }
+  .dk-wa {
+    display: inline-block;
+    font-family: inherit;
+    cursor: pointer;
+    background: #25D366; color: #fff;
+    font-weight: 900; font-size: 1.05rem;
+    padding: 14px 30px;
+    border: 3px solid var(--ink); border-radius: 12px;
+    box-shadow: 5px 5px 0 var(--ink);
+    text-decoration: none;
+  }
+  .dk-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin-top: 24px;
+    text-align: left;
+    font-size: 0.82rem;
+  }
+  .dk-points > div {
+    background: #251d33;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 10px 12px;
+    line-height: 1.55;
+  }
+  .dk-alt { font-size: 0.8rem; opacity: 0.8; margin: 16px auto 0; max-width: 640px; line-height: 1.55; }
+
   /* POPUP LIGHTBOX GAMBAR */
   .img-modal-overlay {
     position: fixed;
@@ -261,7 +352,7 @@
       <!-- KARTU PRODUK DAPUR KITA -->
       <div class="card price-card popular" style="background:#2ec4b6; max-width: 450px; width: 100%;">
         <span class="pop-tag" style="background:var(--yellow); color:var(--ink)" data-i18n="tag_new">🐾 NEW RELEASE</span>
-        <h3>🍳 DAPUR KITA</h3>
+        <h3>🍳 DAPUR KITA — KASIR UMKM</h3>
         <div class="price-badge-tag" style="background:var(--blue); color:#fff" data-i18n="dapur_tag_app">⚡ Aplikasi Kasir POS &amp; Pembukuan</div>
         <p class="prod-desc" style="color:#16161a;" data-i18n="dapur_desc">Aplikasi Kasir UMKM serbaguna untuk warung, kedai, cafe, dan usaha kuliner dapur. Resmi dirilis dengan fitur lengkap.</p>
         
@@ -273,11 +364,10 @@
         </div>
 
         <details class="detail-box" style="background:#0b0716; color:#f2eefc;">
-          <summary data-i18n="dapur_sum">🔍 Lihat Detail Fitur</summary>
+          <summary data-i18n="dapur_sum">🔍 Lihat Detail Fitur Kasir UMKM</summary>
           <div class="detail-content">
             <p><strong data-i18n="dapur_lbl_feat1">FITUR KASIR &amp; STOK:</strong> <span data-i18n="dapur_feat1_desc">Pencatatan transaksi cepat, manajemen menu &amp; resep dapur, kelola stok bahan baku, Support Thermal Printer Bluetooth.</span></p>
             <p><strong data-i18n="dapur_lbl_feat2">LAPORAN &amp; KEUANGAN:</strong> <span data-i18n="dapur_feat2_desc">Laporan laba rugi otomatis, rekap penjualan harian/bulanan, export Excel/PDF, serta fitur multi-kasir/karyawan.</span></p>
-            <p><strong data-i18n="dapur_lbl_feat3">NOTE:</strong> <span data-i18n="dapur_feat3_desc">Max login 3 Device. Akun yang tidak terdaftar tidak akan bisa masuk.</span></p>
           </div>
         </details>
 
@@ -285,7 +375,7 @@
       </div>
 
     </div>
-
+	
     <!-- SECTION PORTOFOLIO: GALERI & VIDEO BERDAMPINGAN -->
     <div class="dapur-showcase">
       <h3 style="text-align: center; margin-bottom: 5px; font-size: 1.4rem; color: var(--yellow);" data-i18n="dapur_gallery_title">📱 Dokumentasi &amp; Pratinjau Sistem Dapur Kita</h3>
@@ -357,7 +447,7 @@
 
         <!-- VIDEO DEMO DI BAGIAN KANAN -->
         <div class="video-flow-container">
-          <h4 style="font-size: 1.05rem; color: var(--yellow);" data-i18n="dapur_video_title">🎬 Sistem Dapur Kita</h4>
+          <h4 style="font-size: 1.05rem; color: var(--yellow);" data-i18n="dapur_video_title">🎬 Video Demo Sistem Dapur Kita</h4>
           <p style="font-size: 0.82rem; opacity: 0.85;" data-i18n="dapur_video_sub">Pratinjau langsung penggunaan aplikasi kasir.</p>
           <div class="video-wrapper">
             <video autoplay muted loop playsinline controls>
@@ -402,8 +492,8 @@
     <img class="cat-footer" src="../assets/cat.gif" alt="Cat Mascot">
     <p>© 2026 <span class="fname">HAYTOR STORE</span></p>
     <p style="margin-top: 10px; font-size: 0.85rem;">
-      <a href="../privacy.html" style="color: var(--yellow); text-decoration: none; margin-right: 15px;" data-i18n="footer_privacy">Privacy Policy</a> | 
-      <a href="../terms.html" style="color: var(--yellow); text-decoration: none; margin-left: 15px;" data-i18n="footer_terms">Terms of Service</a>
+      <a href="../Privacy/" style="color: var(--yellow); text-decoration: none; margin-right: 15px;" data-i18n="footer_privacy">Privacy Policy</a> | 
+      <a href="../Terms/" style="color: var(--yellow); text-decoration: none; margin-left: 15px;" data-i18n="footer_terms">Terms of Service</a>
     </p>
   </div>
 </footer>
