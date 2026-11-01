@@ -4,199 +4,256 @@
 })();
 
 var I18N_EN = {
-  // Navigasi & Hero
+  // --- Global Nav & Meta ---
   meta_title: "HAYTOR STORE — Digital Software & License Solutions",
+  meta_title_catalog: "Product Catalog — HAYTOR STORE",
+  meta_title_tutorial: "Video Tutorials — HAYTOR STORE",
   nav_services: "Features", 
   nav_packages: "Products", 
+  nav_dapur_kita: "Dapur Kita",
   nav_video: "Video Tutorials",
   nav_order: "How to Order", 
   nav_testi: "Testimonials", 
   nav_contact: "Contact",
-  hero_badge: "🐾 Digital Software Solution 🐱",
+
+  // --- Hero Section ---
+  hero_badge: "🐾 Digital Dark Arts Solution 🐱",
   hero_title: "Digital Software & License Solutions.",
-  hero_desc: "Central hub for digital applications, message integration scripts, and licenses. Suitable for educational testing, phone monitoring, and tracking.",
-  cta_telegram: "💬 Telegram Official", 
-  cta_wa: "🟢 WhatsApp Admin", 
-  cta_packages: "See Catalog ↓",
-  chip1: "⚡ Fast Process", 
-  chip2: "🔒 Safe & Trusted", 
-  chip3: "📁 Full Guidance & Support",
+  hero_desc: "Center for digital dark arts applications, message integration scripts, and licenses. Suitable for educational purposes against scammers, mobile phone wiretapping, and mobile phone tracking.",
+  cta_packages: "🛒 VIEW CATALOG 🛒",
+  cta_finance: "💵 FINANCIAL CATALOG 💵",
+  cta_telegram: "💬 Official Telegram",
+  cta_wa: "🟢 Admin WhatsApp",
+  chip1: "⚡ Super Fast Process",
+  chip2: "🔒 Safe & Trusted Transactions",
+  chip3: "📁 Guides & Full Support",
 
-  // Services
-  services_badge: "MAIN FEATURES", 
+  // --- Services / Fitur Utama ---
+  services_badge: "MAIN FEATURES",
   services_title: "Featured Services & Modules",
-  services_sub: "Complete digital automation and testing solutions in one hand.",
+  services_sub: "Complete automation and digital system testing solutions in one hand.",
   svc1_title: "System Disruption (Bug)",
-  svc1_desc: "System vulnerability exploitation, hidden force-close (Android & iOS), extreme delay, and target network suppression.",
-  svc2_title: "Remote Access Trojan (RAT)",
-  svc2_desc: "Full remote control features: camera access, flashlight, GPS tracking, SMS/Gmail reader, gallery, and device lock.",
+  svc1_desc: "System gap exploitation, forced closure of hidden apps (Android & iOS), extreme delay times, and target network pressure.",
+  svc2_title: "Remote Controller (RAT)",
+  svc2_desc: "Complete remote control features: camera access, flashlight, GPS location, read SMS/Gmail, gallery, to device locking.",
   svc3_title: "Network Tools",
-  svc3_desc: "Server stress testing (DDoS), network analysis, public info tracker, and server path scanner.",
+  svc3_desc: "Server resilience testing (DDoS), internet network analysis, public information tracker, and server route scanner.",
   svc4_title: "Automation & Utility",
-  svc4_desc: "Automated bulk message sender, Telegram bot integration, AI assistant, media downloader, and digital bookkeeping.",
+  svc4_desc: "Automatic sequential message sender, Telegram Bot integration, AI assistant, automatic media downloader, and digital bookkeeping.",
 
-  // Catalog Section General
-  packages_badge: "PRODUCT CATALOG", 
+  // --- Order Section ---
+  order_badge: "TRANSACTION GUIDE",
+  order_title: "5 Practical Ordering Steps",
+  order_sub: "No hassle — fast process and delivered directly by the admin.",
+  step1_title: "Choose Service",
+  step1_desc: "Select the product and pricing package you want to buy via the Product Catalog page.",
+  step2_title: "Choose Contact",
+  step2_desc: "Choose WhatsApp chat or Telegram via the interactive popup that appears.",
+  step3_title: "Payment",
+  step3_desc: "Make payment according to the method provided by the admin.",
+  step4_title: "ID Activation",
+  step4_desc: "Wait a few minutes for the application license/ID to be activated.",
+  step5_title: "Ready to Use",
+  step5_desc: "Log in to the application and enjoy all its complete features!",
+
+  // --- Testimonials & Channels ---
+  testi_badge: "OFFICIAL CHANNELS & TESTIMONIALS",
+  testi_title: "Transaction Proof & Official Channels",
+  testi_sub: "Join our official WhatsApp channel for app release info and thousands of proofs.",
+  testi1_quote: "“Trusted buyer transaction proof channel and regular feature updates.”",
+  btn_testi1: "⭐ WA Testimonial Channel",
+  testi2_quote: "“Official information channel for product releases, app updates, and license promos.”",
+  btn_testi2: "📢 Official HAYTOR Channel",
+
+  // --- Contact Section ---
+  contact_title: "Need Help / Want to Buy?",
+  contact_desc: "Contact admin directly via Telegram or WhatsApp. Fast Response!",
+
+  // --- Katalog Produk (Header & Tag) ---
+  packages_badge: "PRODUCT CATALOG",
   packages_title: "Applications & License Packages",
-  packages_sub: "Click directly on any pricing package below to place an instant order.",
-  tag_no_tg: "⚡ No Telegram Needed (WA Only)",
+  packages_sub: "Click directly on the pricing package below to place an instant order.",
+  tag_no_tg: "⚡ Without Telegram (WA Only)",
   tag_req_tg: "🤖 Telegram Required",
   tag_popular: "⭐ POPULAR",
   tag_new: "🐾 NEW RELEASE",
 
-  // Global Package Names
+  // --- Durasi & Tombol Paket ---
+  pkg_basic_1d: "Basic 1 Day",
+  pkg_basic_7d: "Basic 7 Days",
   pkg_1d: "1 Day",
   pkg_5d: "5 Days",
   pkg_7d: "7 Days",
-  pkg_30d: "30 Days",
   pkg_1w: "1 Week",
   pkg_1m: "1 Month",
-  pkg_basic_1d: "Basic 1 Day",
-  pkg_basic_7d: "Basic 7 Days",
+  pkg_30d: "30 Days",
   pkg_perm: "Permanent",
-  pkg_right_hand: "Right-Hand Admin",
-  pkg_private_pt: "Private Corporate",
-  pkg_member: "Member",
+  pkg_reseller: "Reseller",
+  pkg_partner: "Partner",
+  pkg_right_hand: "Right Hand",
+  pkg_private_pt: "Private PT",
+  pkg_fullup: "Full Up",
+  pkg_full_update: "Full Update",
+  pkg_tk_staff: "TK / Staff",
+  pkg_vip: "VIP",
+  pkg_admin: "Admin",
+  pkg_owner: "Owner",
+
+  // --- Detail & Deskripsi Produk 1 - 6 ---
+  p1_desc: "System bug application and complete supporting utilities, using WhatsApp only.",
+  lbl_bug: "SYSTEM DISRUPTION (BUG):",
+  p1_bug_desc: "Latest system gap exploitation, forced closure of hidden apps for Android & iOS, extreme delay times, target UI blackout, network pressure, and global/group chat disruption.",
+  lbl_tools: "TOOLS & ENTERTAINMENT:",
+  p1_tool_desc: "Domain reports, network path scanner, theme manager, AI assistant, global message sender, digital Al-Qur'an, comic reader, anime/drama player, social media downloader, and QR Code generator.",
+  btn_order_admin_p1: "Order Holow V14 via Admin",
+  sum_p1: "🔍 View Holow V14 Feature Details",
+
+  p2_desc: "High-speed digital tool and network testing tools via WhatsApp.",
+  lbl_util_net: "UTILITY & NETWORK:",
+  p2_util_desc: "Server resilience testing (DDoS), internet network analysis, public information tracker, automatic media downloader, sequential message sender, mini games, data format changer, and shortcut menu.",
+  btn_order_admin_p2: "Order Vilian Crash via Admin",
+  sum_p2: "🔍 View Vilian Crash Feature Details",
+
+  p3_desc: "Message automation engine and complete RAT features with Telegram bot integration.",
+  lbl_bug_rat: "SYSTEM DISRUPTION & RAT:",
+  p3_bug_desc: "Sending empty number delays, hidden iOS force closes, consecutive calls, remote control (RAT), wiretapping features, and massive link registration.",
+  lbl_supp_tools: "SUPPORTING TOOLS:",
+  p3_tool_desc: "Financial bookkeeping, AI assistant, network analysis, public data tracker, automatic downloader, and auto bot installer.",
+  btn_order_admin_p3: "Order Mantax X Rat via Admin",
+  sum_p3: "🔍 View Mantax X Rat Feature Details",
+
+  p4_desc: "Complete application containing bug systems, wiretapping, and multi-RAT in one hand via WhatsApp.",
+  lbl_bug_tools: "BUG & TOOLS:",
+  p4_desc_det: "Force close WA Android/Business/iOS, automatic calls, group neutralization, digital finance, AI assistant, VPS management, and management of 3 RAT systems in 1 APK.",
+  btn_order_admin_p4: "Order Syam X Rat via Admin",
+  sum_p4: "🔍 View Syam X Rat Feature Details",
+
+  p5_desc: "Remote control application (RAT) and advanced system disruption features without Telegram.",
+  lbl_bug_rat_spy: "DISRUPTION & SPY RAT:",
+  p5_desc_det: "Flashlight control, camera, HP locker, location tracker, live monitoring, screenshot, read contacts/Gmail/SMS/Gallery, turn off WiFi, to remote shutdown HP.",
+  btn_order_admin_p5: "Order X - Far X Rat via Admin",
+  sum_p5: "🔍 View X - Far X Rat Feature Details",
+
+  p6_tag: "⚡ WhatsApp Attack Menu & Rat",
+  p6_desc: "Comprehensive bug attack application with member, reseller, to founder options.",
   pkg_mem_30d: "Member 30 Days",
   pkg_mem_100d: "Member 100 Days",
   pkg_mem_perm: "Member Permanent",
-  pkg_mem_1m: "Member 1 Month",
-  pkg_mem_fullup: "Member Full Up",
   pkg_res_365d: "Reseller 365 Days",
   pkg_res_perm: "Reseller Permanent",
-  pkg_res_1m: "Reseller 1 Month",
   pkg_vip_perm: "VIP Permanent",
   pkg_owner_perm: "Owner Permanent",
   pkg_helper_perm: "Helper Permanent",
   pkg_admin_perm: "Admin Permanent",
-  pkg_pt_perm: "Corporate Permanent",
+  pkg_pt_perm: "PT Permanent",
   pkg_founder_perm: "Founder Permanent",
-  pkg_1d_trial: "1 Day Trial",
-  pkg_1m_trial: "1 Month Trial",
-
-  // Label Fitur Detail
-  lbl_bug: "SYSTEM BUGS:",
-  lbl_tools: "TOOLS & ENTERTAINMENT:",
-  lbl_util_net: "UTILITY & NETWORK:",
-  lbl_bug_rat: "SYSTEM BUGS & RAT:",
-  lbl_supp_tools: "SUPPORTING TOOLS:",
-  lbl_bug_tools: "BUG & TOOLS:",
-  lbl_bug_rat_spy: "BUGS & SPY RAT:",
-  lbl_wa_attack: "WHATSAPP ATTACK MENU:",
-  lbl_bug_module: "BUG MODULES:",
-  lbl_bug_apps: "BUG APPS FEATURES:",
-  lbl_utility: "UTILITY FEATURES:",
-  lbl_bug_menu: "BUG MENU:",
-  lbl_other_features: "OTHER FEATURES:",
-  lbl_viper_features: "VIPER BUGS FEATURES:",
-
-  // Deskripsi Produk & Details
-  p1_desc: "Complete system bug and utility application, accessible via WhatsApp only.",
-  sum_p1: "🔍 View Holow V14 Feature Details",
-  p1_bug_desc: "Latest system exploits, force close hidden apps for Android & iOS, extreme delay, target UI blackout, network suppression, and group/global chat disruption.",
-  p1_tool_desc: "Domain lookup, network path scanner, theme manager, AI assistant, global messenger, digital Quran, comic reader, anime player, social media downloader, and QR generator.",
-  btn_order_admin_p1: "Order Holow V14 via Admin",
-
-  p2_desc: "High-speed digital utility and network testing toolkit via WhatsApp.",
-  sum_p2: "🔍 View Vilian Crash Feature Details",
-  p2_util_desc: "Server stress testing (DDoS), internet network analysis, public info tracker, auto media downloader, bulk message sender, mini-games, and format converter.",
-  btn_order_admin_p2: "Order Vilian Crash via Admin",
-
-  p3_desc: "Message automation engine and full RAT features integrated with Telegram bot.",
-  sum_p3: "🔍 View Mantax X Rat Feature Details",
-  p3_bug_desc: "Blank number delay sending, hidden iOS force close, auto-calling, remote access control (RAT), phone spy, and massive link registrant.",
-  p3_tool_desc: "Bookkeeping, AI assistant, network analysis, public data tracker, auto downloader, and bot installer.",
-  btn_order_admin_p3: "Order Mantax X Rat via Admin",
-
-  p4_desc: "All-in-one app containing bug system, phone spy, and multi-RAT in one APK via WhatsApp.",
-  sum_p4: "🔍 View Syam X Rat Feature Details",
-  p4_desc_det: "Force close WA Android/Business/iOS, auto calls, group freezer, digital finance manager, AI assistant, VPS manager, and 3 RAT systems.",
-  btn_order_admin_p4: "Order Syam X Rat via Admin",
-
-  p5_desc: "Advanced Remote Access Trojan (RAT) and system disruption app without Telegram.",
-  sum_p5: "🔍 View X - FAR X RAT Feature Details",
-  p5_desc_det: "Torch/camera control, screen lock, GPS locator, live monitoring, screenshot tool, contact/SMS/Gmail/gallery reader, remote WiFi/Power kill.",
-  btn_order_admin_p5: "Order X - Far X Rat via Admin",
-
-  p6_tag: "⚡ WhatsApp Attack Menu & RAT",
-  p6_desc: "Comprehensive bug attack app with flexible member to founder licensing.",
   sum_p6: "🔍 View X•Miyabi V7 Feature Details",
+  lbl_wa_attack: "WHATSAPP ATTACK MENU:",
   p6_attack_desc: "Bug One (Entry-Level), Custom Bug, Group Bug (Crash Group), and Ban Group.",
-  p6_mod_desc: "FC Invisible, FC Click, Bulod Crash Delay, Crash C1 Pack, Delay Frazer, Delay Hard Try, Blank Click, Crash Notif, Delay X Forceclose, Crash UI Chat, Crash Spam, Quota Drain, Android Crash, Home Crash, Delay Invisible.",
+  lbl_bug_module: "BUGS MODULE:",
+  p6_mod_desc: "FC Invisible, FC Click, Bulod Crash Delay, Crash C1 Pack, Delay Frazer, Delay Hard Try, Blank Click, Crash Notif, Delay X Forceclose, Crash UI Chat, Crash Spam, Drain Quota, Crash Android, Crash Home, Delay Invisible.",
   btn_order_admin_p6: "Order X•Miyabi V7 via Admin",
 
-  p7_tag: "⚡ Bug Apps & RAT / Phone Spy",
-  p7_desc: "Combination of bug apps, RAT spy tools, global sender, and Osint tools.",
-  sum_p7: "🔍 View Oxva Bug X Rat Feature Details",
-  p7_bug_desc: "Forclose Invisible, Delay Hit, Delay Invisible, Blank Hard, Spam UI, Crash Hard, Loca Hard.",
-  p7_util_desc: "RAT / Phone Spy, Global Sender, Free Fire Server Lag DDoS, Domain Osint Tools, WhatsApp Group Bug.",
-  btn_order_admin_p7: "Order Oxva Bug X Rat via Admin",
-
+  // --- Label Badge Tiap Produk 7 - 11 ---
+  p7_tag: "⚡ Bug Apps & Rat/Spy Features",
   p8_tag: "⚡ Full Bug & Media Downloader",
-  p8_desc: "Complete toolkit from freeze, force close, RAT spy to entertainment.",
-  sum_p8: "🔍 View Red Bull Feature Details",
-  p8_bug_desc: "Freeze Home, Blank Screen, Delay Invisible, Freeze Invisible, Force Close iPhone, Force Close Android.",
-  p8_other_desc: "RAT / Phone Spy, Global Sender, Anime Stream, Server Manager, Digital Quran, DDoS Tools, Wifi Killer, Osint Tools, Media Downloader, Utilities, News Reader.",
-  btn_order_admin_p8: "Order Red Bull via Admin",
-
   p9_tag: "⚡ Tools & Prank Utility",
-  p9_desc: "Multifunctional application for system testing, spamming, and digital utilities.",
-  sum_p9: "🔍 View Nexsus Feature Details",
-  p9_bug_desc: "Crash Msg Android, Delay Invisible, Prank Alert Spam, Banned Group WA.",
-  p9_other_desc: "Spam Pair, AM Premium, Spam NGL, Web To Apk, QR Generator, WA Ban Checker, JS Encryptor, Media Downloader, Netflix Token Player.",
-  btn_order_admin_p9: "Order Nexsus via Admin",
-
-  p10_tag: "⚡ High-Penetration WA Bug X Spy",
-  p10_desc: "High-penetration fast bug application equipped with phone spy features.",
-  sum_p10: "🔍 View Bumble Bie Feature Details",
-  p10_bug_desc: "Forclose Invisible Work All, Forclose One Msg Hard, Forclose Video All Android, Forclose Image Work All WA, Crash Invisible No Click, Crash Visible Auto C1, Freeze Chat Brutal, Blank Android No Click, Forclose New V2, Delay Hard, Crash UI System.",
-  btn_order_admin_p10: "Order Bumble Bie via Admin",
-
+  p10_tag: "⚡ Gacor WhatsApp Bug X Wiretap",
   p11_tag: "⚡ New Release Sale",
-  p11_desc: "Premium bug application with fresh UI, RAT features, and AM Mod integration.",
+
+  // --- Deskripsi Produk 7 - 11 ---
+  p7_desc: "Combination of bug apps features, RAT/wiretapping, global sender, and Osint tools.",
+  p8_desc: "Most complete features ranging from freeze, force close, RAT/wiretapping to entertainment.",
+  p9_desc: "Multifunctional application for system testing, spamming, and digital utilities.",
+  p10_desc: "Fast high-penetration bug application equipped with wiretapping features.",
+  p11_desc: "Premium bug application with a new look, RAT features, and AM Mod integration.",
+
+  // --- Nama Paket / Durasi / Tombol Kategori Lainnya ---
+  pkg_member: "Member",
+  pkg_moderator: "Moderator",
+  pkg_exec_pt: "Executive PT",
+  pkg_elite_pt: "Elite PT",
+  pkg_sup_pt: "Supreme PT",
+  pkg_1d_trial: "1 Day Trial",
+  pkg_1m_trial: "1 Month Trial",
+  pkg_permanent: "Permanent",
+  pkg_mem_1m: "Member 1 Month",
+  pkg_res_1m: "Reseller 1 Month",
+  pkg_mem_fullup: "Member Full Up",
+
+  // --- Tombol Detail Fitur Produk 7 - 11 ---
+  sum_p7: "🔍 View Oxva Bug X Rat Feature Details",
+  sum_p8: "🔍 View Red Bull Feature Details",
+  sum_p9: "🔍 View Nexsus Feature Details",
+  sum_p10: "🔍 View Bumble Bie Feature Details",
   sum_p11: "🔍 View Viper Bugs Feature Details",
-  p11_bug_desc: "Create AM Mod, OTP Spam, Global Chat, Exclusive Custom UI, All Bug Work, RAT (Phone Spy), Anti-Ampos System.",
+
+  // --- Detail Konten Produk 7 - 11 ---
+  lbl_bug_apps: "BUG APPS FEATURES:",
+  p7_bug_desc: "Forclose Invisible, Delay Hit, Delay Invisible, Blank Hard, Spam UI, Crash Hard, Loca Hard.",
+  lbl_utility: "UTILITY FEATURES:",
+  p7_util_desc: "RAT / Wiretap, Global Sender, DDoS Lag Server Free Fire, Domain Osint Tools, WhatsApp Group Bug.",
+
+  lbl_bug_menu: "BUG MENU:",
+  p8_bug_desc: "Freeze Home, Blank Screen, Delay Invisible, Freeze Invisible, Force Close iPhone, Force Close Android.",
+  lbl_other_features: "OTHER FEATURES:",
+  p8_other_desc: "Rat / Wiretap, Global Sender, Stream Anime, Manage Server, Al-Qur'an, DDoS Tools, Watch Dracin, Killer Wifi, Osint Tools, Downloader, Utilities, Read News, Social Media Features.",
+
+  p9_bug_desc: "Crash Msg Andro, Delay Invisible, Prank Spam Porn, Prank Spam Alert, Banned WhatsApp Group.",
+  p9_other_desc: "Spam Pair, AM Prem, Spam NGL, Web To Apk, QR Generator, Check Banned WA, Enc JavaScript, Media Downloader, Search Script Mobile Legends, Netflix Streaming Token.",
+
+  lbl_bug_menu: "FEATURE MENU BUG:",
+  p10_bug_desc: "Forclose Invisible Work All, Forclose One Msg Hard, Forclose Video All Android, Forclose Image Work All WA, Crash Invisible No Click, Crash Visible Auto C1, Freeze Chat Brutal, Blank Android No Click, Forclose New V2, Delay Hard, Crash UI System.",
+
+  lbl_viper_features: "V1PER BUGS FEATURES:",
+  p11_bug_desc: "Create AM Mod, Spam OTP, Global Chat, Cool Design + Unique, All Bug Work, RAT (Wiretap), Anti Ampos.",
+
+  // --- Tombol Order Admin Katalog ---
+  btn_order_admin_p7: "Order Oxva Bug X Rat via Admin",
+  btn_order_admin_p8: "Order Red Bull via Admin",
+  btn_order_admin_p9: "Order Nexsus via Admin",
+  btn_order_admin_p10: "Order Bumble Bie via Admin",
   btn_order_admin_p11: "Order Viper Bugs via Admin",
 
-  // Video Section
-  video_badge: "VIDEO & DEMO HUB",
-  video_title: "Tutorial & Performance Videos",
-  video_sub: "Watch usage guides and app performance proofs. If opening via Chrome PC, click PLAY then triple dot to activate Picture in Picture.",
+  // --- Kotak Pengingat / Bantuan di Bagian Bawah Katalog ---
+  catalog_help_title: "📺 Confused How to Use It?",
+  catalog_help_desc: "Watch complete guides and app usage demonstrations through our video tutorial page!",
+  catalog_help_btn: "▶ Watch Video Tutorial Now",
 
-  // Order Steps
-  order_badge: "TRANSACTION GUIDE", 
-  order_title: "5 Easy Ordering Steps",
-  order_sub: "Hassle-free — fast process and direct delivery by admin.",
-  step1_title: "Choose Service",
-  step1_desc: "Click directly on any pricing package above.",
-  step2_title: "Select Contact",
-  step2_desc: "Select WhatsApp or Telegram via the interactive popup window.",
-  step3_title: "Payment",
-  step3_desc: "Complete payment using the payment methods provided by admin.",
-  step4_title: "ID Activation",
-  step4_desc: "Wait a few minutes while your app ID or license is activated.",
-  step5_title: "Ready to Use",
-  step5_desc: "Login to the application and enjoy all full features!",
+  // --- Dapur Kita Page ---
+  dapur_meta_title: "Dapur Kita — UMKM Cashier | HAYTOR STORE",
+  dapur_badge: "DAPUR KITA",
+  dapur_title: "UMKM Cashier Solution & Kitchen Management",
+  dapur_sub: "Practical digital cash register system (POS) to record sales, manage kitchen ingredient stock, print receipts, and UMKM financial reports.",
+  dapur_tag_coming: "🚧 COMING SOON",
+  dapur_card_title: "🍳 DAPUR KITA — UMKM CASHIER",
+  dapur_tag_app: "📱 POS Cashier App & Bookkeeping",
+  dapur_desc: "Versatile UMKM Cashier application for stalls, cafes, and kitchen culinary businesses. Currently, the application is in the system build development stage.",
+  dapur_status_title: "Project Status",
+  dapur_status_val: "On Progress (Build)",
+  dapur_sum: "🔍 View UMKM Cashier Feature Leak",
+  dapur_lbl_feat1: "CASHIER & STOCK FEATURES:",
+  dapur_feat1_desc: "Fast transaction recording, kitchen menu & recipe management, raw material stock management, Bluetooth Thermal Printer Support.",
+  dapur_lbl_feat2: "REPORTS & FINANCE:",
+  dapur_feat2_desc: "Automatic profit and loss reports, daily/monthly sales recap, Excel/PDF export, and multi-cashier/employee features.",
+  dapur_warning: "⏳ Please Be Patient, Application Is Still In Build Phase",
 
-  // Testimonials
-  testi_badge: "OFFICIAL CHANNELS", 
-  testi_title: "Proof & Official Channels",
-  testi_sub: "Join our official WhatsApp channels for updates and buyer proofs.",
-  testi1_quote: "“Trusted buyer transaction proof channel with regular feature updates.”",
-  btn_testi1: "⭐ WA Testimonial Channel",
-  testi2_quote: "“Official channel for product releases, app updates, and license promos.”",
-  btn_testi2: "📢 HAYTOR Official Channel",
+  // --- Video Tutorial Page ---
+  video_badge: "VIDEO & DEMO CENTER",
+  video_title: "Usage Guide Videos & Bug Results",
+  video_sub: "Watch usage methods and application performance proofs. If opening via Chrome from a Personal Computer (PC) click PLAY then click three dots lanjut picture in picture.",
 
-  // Contact & Footer
-  contact_title: "Need Help / Want to Order?", 
-  contact_desc: "Contact admin directly via Telegram or WhatsApp. Fast response!",
+  // --- Footer Links ---
+  footer_privacy: "Privacy Policy",
+  footer_terms: "Terms of Service",
+
+  // --- Modal & Lainnya ---
   modal_title: "Select Ordering Channel",
-  modal_sub: "Please choose a platform to proceed with instant message formatting:"
+  modal_sub: "Please choose a platform to continue ordering with an automated message format:"
 };
 
 var ID_DEFAULTS = {};
 
-// Inisialisasi penyimpan teks bawaan Bahasa Indonesia
 document.addEventListener('DOMContentLoaded', function(){
   document.querySelectorAll('[data-i18n]').forEach(function(el){ 
     ID_DEFAULTS[el.getAttribute('data-i18n')] = el.innerHTML; 
