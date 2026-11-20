@@ -364,6 +364,7 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
   animation: logoBounce 2.4s ease-in-out infinite;
 }
 .namxo-logo-fallback {
+  display: block !important;
   font-size: clamp(3.2rem, 14vw, 5.2rem);
   font-weight: 900;
   letter-spacing: -1px;
@@ -391,11 +392,12 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
     filter: drop-shadow(0 5px 0 #000) drop-shadow(0 0 20px rgba(255,93,143,0.55));
   }
 }
-/* hide img if broken, show text */
-.namxo-logo-fallback { display: block; }
-.namxo-logo-wrap img.namxo-logo-img[style*="display: block"] + .namxo-logo-fallback,
+/* logo fallback always visible unless real PNG shown */
+.namxo-logo-fallback {
+  display: block !important;
+}
 .namxo-logo-wrap:has(img.namxo-logo-img[style*="display: block"]) .namxo-logo-fallback {
-  display: none;
+  display: none !important;
 }
 
 /* Title under logo */
@@ -432,6 +434,7 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
   border: 3px solid var(--ink);
   background: #0a0614;
   box-shadow: 4px 4px 0 var(--ink);
+  min-height: 180px;
 }
 .namxo-media-track {
   display: flex;
@@ -608,6 +611,7 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
     border-radius: 22px;
   }
   .namxo-logo-fallback {
+  display: block !important;
     font-size: clamp(2.8rem, 16vw, 3.8rem);
   }
   .namxo-media-card {
