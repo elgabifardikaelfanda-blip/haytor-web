@@ -106,8 +106,8 @@
     <div class="namxo-content">
       <div class="namxo-badge" data-i18n="namxo_badge">🐾 RILIS TERBARU • HAYTOR STORE</div>
       <div class="namxo-logo-wrap">
-        <div class="namxo-logo-fallback" style="display:block">NamXO</div>
-        <img src="assets/logo-namxo.png" alt="NamXO" class="namxo-logo-img" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+        <div class="namxo-logo-fallback">NamXO</div>
+        <img src="assets/logo-namxo.png" alt="NamXO" class="namxo-logo-img" style="display:none" onload="this.style.display='block';var f=this.parentElement.querySelector('.namxo-logo-fallback');if(f)f.style.display='none';" onerror="this.style.display='none'">
       </div>
       <h2 class="namxo-title" data-i18n="namxo_title">APK NamXO</h2>
       <p class="namxo-sub" data-i18n="namxo_sub">Full Bug Max + Controller Lengkap • Sender Global • Update Otomatis</p>

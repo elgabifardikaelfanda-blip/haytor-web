@@ -262,7 +262,7 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
   margin: 0 auto;
   max-width: 960px;
   overflow: hidden;
-  padding: 36px 18px 32px;
+  padding: 48px 18px 32px;
   text-align: center;
 }
 
@@ -383,20 +383,20 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
     filter: drop-shadow(0 4px 0 #000) drop-shadow(0 0 16px rgba(255,80,80,0.4));
   }
   40% {
-    transform: translateY(-6px) scale(1.03);
-    filter: drop-shadow(0 8px 0 #000) drop-shadow(0 0 28px rgba(255,197,61,0.65));
+    transform: translateY(-4px) scale(1.025);
+    filter: drop-shadow(0 6px 0 #000) drop-shadow(0 0 26px rgba(255,197,61,0.65));
   }
   60% {
-    transform: translateY(-2px) scale(1.01);
-    filter: drop-shadow(0 5px 0 #000) drop-shadow(0 0 22px rgba(255,93,143,0.55));
+    transform: translateY(-1px) scale(1.01);
+    filter: drop-shadow(0 5px 0 #000) drop-shadow(0 0 20px rgba(255,93,143,0.55));
   }
 }
 /* hide img if broken, show text */
-.namxo-logo-img[style*="display: none"] + .namxo-logo-fallback { display: block; }
-.namxo-logo-fallback { display: none; }
-.namxo-logo-wrap:not(:has(img[src])) .namxo-logo-fallback,
-.namxo-logo-wrap img:not([src]),
-.namxo-logo-wrap img[src=""] { display: none; }
+.namxo-logo-fallback { display: block; }
+.namxo-logo-wrap img.namxo-logo-img[style*="display: block"] + .namxo-logo-fallback,
+.namxo-logo-wrap:has(img.namxo-logo-img[style*="display: block"]) .namxo-logo-fallback {
+  display: none;
+}
 
 /* Title under logo */
 .namxo-title {
