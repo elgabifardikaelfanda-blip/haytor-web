@@ -139,8 +139,13 @@ section{position:relative;padding:70px 18px;overflow:hidden}
 .sec-sub{text-align:center;font-weight:600;opacity:.85;max-width:620px;margin:0 auto 38px}
 .sec-head-badge{display:block;width:max-content;margin:0 auto 14px;background:var(--ink);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:2px;padding:5px 16px;border-radius:999px;transform:rotate(-1.5deg)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-.catalog-grid{grid-template-columns:repeat(auto-fit,minmax(310px,1fr));}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.catalog-grid{
+  grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:28px;
+  margin-top:36px;
+  padding-top:12px;
+}
 
 .card{border:var(--border);border-radius:20px;padding:24px 20px;box-shadow:var(--shadow);position:relative;color:var(--ink);transition:transform .15s;background:#fff;}
 .card:hover{transform:rotate(-1deg) scale(1.01)}
@@ -151,9 +156,35 @@ section{position:relative;padding:70px 18px;overflow:hidden}
 
 #paket,#dapur-kita{background:var(--purple)}
 #paket .sec-title,#paket .sec-sub,#dapur-kita .sec-title,#dapur-kita .sec-sub{color:#fff}
-.price-card{background:#fff;text-align:left;display:flex;flex-direction:column;justify-content:space-between;}
-.price-card.popular{background:var(--yellow);transform:scale(1.02)}
-.pop-tag{position:absolute;top:-16px;right:16px;background:var(--pink);color:#fff;border:var(--border);border-radius:999px;padding:3px 14px;font-weight:900;font-size:.8rem;transform:rotate(3deg)}
+.price-card{
+  background:#fff;
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  margin-top:8px;
+}
+.price-card.popular{
+  background:var(--yellow);
+  transform:none;
+  padding-top:32px;
+}
+.pop-tag{
+  position:absolute;
+  top:-14px;
+  right:14px;
+  background:var(--pink);
+  color:#fff;
+  border:var(--border);
+  border-radius:999px;
+  padding:4px 14px;
+  font-weight:900;
+  font-size:.78rem;
+  transform:rotate(2deg);
+  z-index:4;
+  box-shadow:3px 3px 0 var(--ink);
+  white-space:nowrap;
+}
 .price-badge-tag{display:inline-block;background:var(--pink);color:#fff;font-size:0.75rem;font-weight:800;padding:4px 10px;border-radius:8px;border:2px solid var(--ink);margin-bottom:10px;}
 
 .prod-desc{font-size:0.88rem;color:#16161a;margin-bottom:14px;font-weight:600;}
@@ -214,3 +245,388 @@ img.divider{display:block;margin:0 auto 30px;width:min(300px,70%);height:auto}
 .modal-icon{font-size:2.5rem;margin-bottom:10px;}
 .modal-card h3{font-size:1.4rem;font-weight:900;margin-bottom:8px;}
 .modal-btn-row{display:flex;gap:12px;margin-top:20px;}
+
+/* ===== NamXO HERO BANNER (clean + fixed) ===== */
+.namxo-section {
+  padding: 24px 14px 16px;
+  border-bottom: var(--border);
+  background: var(--paper);
+}
+
+.namxo-hero-banner {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0%, #3a1558 0%, #1a0a2e 45%, #0d0221 100%);
+  border: 4px solid var(--ink);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--ink), 0 0 50px rgba(255,93,143,0.22);
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: hidden;
+  padding: 36px 18px 32px;
+  text-align: center;
+}
+
+.namxo-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,0.08) 3px,
+    rgba(0,0,0,0.08) 6px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.namxo-glow {
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255,93,143,0.28), transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(46,196,182,0.18), transparent 45%);
+  animation: namxoPulse 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes namxoPulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+.namxo-particles { position: absolute; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+.namxo-particles span {
+  position: absolute;
+  width: 6px; height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--yellow);
+  animation: namxoFloat 8s linear infinite;
+}
+.namxo-particles span:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
+.namxo-particles span:nth-child(2) { top: 50%; left: 90%; background: var(--pink); animation-delay: 1.5s; }
+.namxo-particles span:nth-child(3) { top: 25%; left: 70%; background: var(--teal); animation-delay: 3s; }
+.namxo-particles span:nth-child(4) { top: 70%; left: 15%; background: #fff; animation-delay: 4.5s; }
+.namxo-particles span:nth-child(5) { top: 12%; left: 45%; background: var(--blue); animation-delay: 2s; }
+.namxo-particles span:nth-child(6) { top: 40%; left: 25%; background: var(--pink); width: 4px; height: 4px; animation-delay: 1s; }
+.namxo-particles span:nth-child(7) { top: 60%; left: 55%; background: var(--yellow); width: 5px; height: 5px; animation-delay: 2.8s; }
+.namxo-particles span:nth-child(8) { top: 20%; left: 85%; background: var(--teal); width: 4px; height: 4px; animation-delay: 3.8s; }
+@keyframes namxoFloat {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateY(-90px) scale(0.4); opacity: 0; }
+}
+
+.namxo-content { position: relative; z-index: 2; }
+
+/* Badge */
+.namxo-badge {
+  display: inline-block;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  margin-bottom: 14px;
+  animation: badgePulse 1.8s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 3px 3px 0 var(--ink), 0 0 0 0 rgba(255,197,61,0);
+    border-color: var(--ink);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 3px 3px 0 var(--ink), 0 0 18px 4px rgba(255,197,61,0.55);
+    border-color: var(--yellow);
+    transform: scale(1.04);
+  }
+}
+
+/* Big NamXO text logo (always looks good) */
+.namxo-logo-wrap {
+  margin: 4px auto 6px;
+  line-height: 1;
+}
+.namxo-logo-img {
+  max-width: min(340px, 78vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 16px rgba(255,93,143,0.55)) drop-shadow(3px 3px 0 #000);
+  animation: logoBounce 2.4s ease-in-out infinite;
+}
+.namxo-logo-fallback {
+  font-size: clamp(3.2rem, 14vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(180deg, #ff4d6d 0%, #ff8c42 35%, #ffd60a 70%, #ff9f1c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 4px 0 #000) drop-shadow(0 0 20px rgba(255,80,80,0.45));
+  line-height: 1.05;
+  margin: 0 auto 4px;
+  animation: logoBounce 2.4s ease-in-out infinite;
+}
+@keyframes logoBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 4px 0 #000) drop-shadow(0 0 16px rgba(255,80,80,0.4));
+  }
+  40% {
+    transform: translateY(-6px) scale(1.03);
+    filter: drop-shadow(0 8px 0 #000) drop-shadow(0 0 28px rgba(255,197,61,0.65));
+  }
+  60% {
+    transform: translateY(-2px) scale(1.01);
+    filter: drop-shadow(0 5px 0 #000) drop-shadow(0 0 22px rgba(255,93,143,0.55));
+  }
+}
+/* hide img if broken, show text */
+.namxo-logo-img[style*="display: none"] + .namxo-logo-fallback { display: block; }
+.namxo-logo-fallback { display: none; }
+.namxo-logo-wrap:not(:has(img[src])) .namxo-logo-fallback,
+.namxo-logo-wrap img:not([src]),
+.namxo-logo-wrap img[src=""] { display: none; }
+
+/* Title under logo */
+.namxo-title {
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 18px rgba(255,255,255,0.35), 2px 2px 0 #000;
+  margin: 4px 0 8px;
+  letter-spacing: 0.5px;
+}
+.namxo-title.glitch { /* keep class but calm it down */
+  animation: none;
+}
+.namxo-title.glitch::before,
+.namxo-title.glitch::after { display: none; }
+
+.namxo-sub {
+  color: #d4c8f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto 18px;
+  line-height: 1.4;
+}
+
+/* Media strip — fixed aspect, consistent cards */
+.namxo-media-strip {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 3px solid var(--ink);
+  background: #0a0614;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.namxo-media-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 12px;
+  animation: mediaScroll 30s linear infinite;
+}
+.namxo-media-track:hover { animation-play-state: paused; }
+@keyframes mediaScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.namxo-media-card {
+  flex: 0 0 118px;
+  width: 118px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #2a2038;
+  background: #15101f;
+  aspect-ratio: 9/16;
+  height: 170px;
+}
+.namxo-media-card:hover {
+  border-color: var(--pink);
+  box-shadow: 0 0 14px rgba(255,93,143,0.4);
+}
+.namxo-media-vid,
+.namxo-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #1a1028;
+}
+.namxo-media-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.88));
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 20px 4px 7px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* Feature slider */
+.namxo-slider-wrap {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 3px solid var(--ink);
+  background: #0b0716;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.namxo-slides {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 300%;
+}
+.namxo-slide {
+  width: 33.333%;
+  flex-shrink: 0;
+  padding: 16px 18px;
+  text-align: left;
+  color: #f2eefc;
+  min-height: 100px;
+}
+.namxo-slide h4 {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: var(--yellow);
+}
+.namxo-slide p {
+  font-size: 0.84rem;
+  line-height: 1.42;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.namxo-slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+.namxo-nav-btn {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 1.15rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.12s, box-shadow 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.namxo-nav-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.namxo-dots { display: flex; gap: 7px; }
+.namxo-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: #4a3f5c;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.namxo-dot.active {
+  background: var(--pink);
+  transform: scale(1.25);
+}
+.namxo-auto-hint {
+  font-size: 0.72rem;
+  opacity: 0.55;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Price chips */
+.namxo-price-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 14px;
+}
+.namxo-chip {
+  background: #110e19;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e0d4ff;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.namxo-chip b { color: var(--yellow); }
+.namxo-chip.highlight {
+  background: var(--yellow);
+  color: var(--ink);
+}
+.namxo-chip.highlight b { color: var(--ink); }
+
+.namxo-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.namxo-cta .btn {
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Mobile first polish */
+@media (max-width: 640px) {
+  .namxo-hero-banner {
+    padding: 28px 12px 24px;
+    border-radius: 22px;
+  }
+  .namxo-logo-fallback {
+    font-size: clamp(2.8rem, 16vw, 3.8rem);
+  }
+  .namxo-media-card {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 148px;
+  }
+  .namxo-slide {
+    padding: 14px 14px;
+    min-height: 90px;
+  }
+  .namxo-slide h4 { font-size: 0.95rem; }
+  .namxo-slide p { font-size: 0.8rem; }
+  .namxo-cta .btn { min-width: 140px; font-size: 0.9rem; }
+}
+
+/* Force logo text when image missing */
+.namxo-logo-wrap img:not([src]),
+.namxo-logo-wrap img[src=""],
+.namxo-logo-wrap img[src*="logo-namxo"] {
+  /* keep trying image; JS/onerror handles hide */
+}

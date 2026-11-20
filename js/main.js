@@ -260,7 +260,35 @@ var I18N_EN = {
   footer_privacy: "Privacy Policy",
   footer_terms: "Terms of Service",
   modal_title: "Select Ordering Channel",
-  modal_sub: "Please choose a platform to continue ordering with an automated message format:"
+  modal_sub: "Please choose a platform to continue ordering with an automated message format:",
+
+  // --- NamXO Banner & Product ---
+  namxo_badge: "🐾 NEW RELEASE • HAYTOR STORE",
+  namxo_title: "APK NamXO",
+  namxo_sub: "Full Bug Max + Complete Controller • Global Sender • Auto Update",
+  namxo_chip_trial: "Trial 1 Day <b>Rp2.000</b>",
+  namxo_chip_vip: "VIP Permanent <b>Rp40.000</b>",
+  namxo_chip_reseller: "Reseller <b>Rp60.000</b>",
+  namxo_cta_catalog: "🛒 View Catalog",
+  namxo_cta_order: "🟢 Order Now",
+  namxo_cta_pricelist: "🛒 View Price List",
+  namxo_slide1_title: "⚡ Bug Max Features",
+  namxo_slide1_desc: "BUG MAX (Delay, Crash, Freeze, 18+ Content), FROST MAX, SHADOW MODE, VIPER, ECHO MAX, STEALTH MODE, GRUP MAXI, CUSTOM PRO/MAX, SUITE, MEGA FLOOD, LOCKDOWN, WA KIT",
+  namxo_slide2_title: "🎮 Full Controller",
+  namxo_slide2_desc: "Live Screen V2, Front & Back Camera, Block Touch, Hang, CPU Burn, Ghost Touch, Jumpscare, Custom Lock, Mic, Phone, Gmail, Contacts, Gallery, Location, Reboot, Messages",
+  namxo_slide3_title: "🕷 Benefits & Roles",
+  namxo_slide3_desc: "Global Sender (VIP 2/day • Reseller 5/day • Partner 10/day), WA Pairing, Account Reselling, Data Download (Partner), AI Chat, Auto APK Update, Bug Stats, Full Guide",
+  namxo_prod_tag: "⚡ New Release • Full Bug + Controller",
+  namxo_prod_desc: "Official NamXO APK from Haytor Store. Bug Max + full Controller, global sender, WA pairing, auto update, and reseller/partner benefits.",
+  namxo_detail_sum: "🔍 View NamXO Feature Details",
+  namxo_order_btn: "Order NamXO via Admin",
+  namxo_pkg_trial1: "Member Trial 1 Day",
+  namxo_pkg_trial7: "Member Trial 7 Days",
+  namxo_pkg_trial30: "Member Trial 30 Days",
+  namxo_pkg_vip: "VIP Permanent",
+  namxo_pkg_reseller: "Reseller Permanent",
+  namxo_pkg_partner: "Partner Permanent",
+  namxo_pkg_owner: "Owner Permanent"
 };
 
 var ID_DEFAULTS = {};
@@ -387,3 +415,92 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 });
+
+// ===== NamXO Feature Slider =====
+(function(){
+  function initSlider(slidesId, prevId, nextId, dotsContainer) {
+    var slides = document.getElementById(slidesId);
+    if (!slides) return;
+    var total = 3;
+    var current = 0;
+    var autoTimer = null;
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      slides.style.transform = 'translateX(-' + (current * 33.333) + '%)';
+      var dots = document.querySelectorAll((dotsContainer || '') + ' .namxo-dot');
+      if (!dots.length && dotsContainer) {
+        var parent = document.getElementById(dotsContainer);
+        if (parent) dots = parent.querySelectorAll('.namxo-dot');
+      }
+      // fallback: find nearest dots
+      if (!dots.length) {
+        var wrap = slides.closest('.namxo-content');
+        if (wrap) dots = wrap.querySelectorAll('.namxo-dot');
+      }
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ prev(); resetAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ next(); resetAuto(); });
+
+    // dots click
+    var wrap = slides.closest('.namxo-content');
+    if (wrap) {
+      wrap.querySelectorAll('.namxo-dot').forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          goTo(parseInt(this.getAttribute('data-idx'), 10));
+          resetAuto();
+        });
+      });
+    }
+
+    // touch swipe
+    var startX = 0;
+    slides.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    slides.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) {
+        if (dx < 0) next(); else prev();
+        resetAuto();
+      }
+    }, {passive:true});
+
+    function resetAuto() {
+      if (autoTimer) clearInterval(autoTimer);
+      autoTimer = setInterval(next, 4500);
+    }
+    resetAuto();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    initSlider('namxoSlides', 'namxoPrev', 'namxoNext', null);
+    initSlider('namxoSlidesHome', 'namxoPrevHome', 'namxoNextHome', 'namxoDotsHome');
+  });
+})();
+
+// ===== NamXO media strip: autoplay muted videos =====
+(function(){
+  function startMediaVids() {
+    document.querySelectorAll('.namxo-media-vid').forEach(function(v){
+      v.muted = true;
+      v.playsInline = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){});
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startMediaVids);
+  } else {
+    startMediaVids();
+  }
+  // retry after short delay for slow loads
+  setTimeout(startMediaVids, 800);
+})();
